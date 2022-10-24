@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/rules-style.css">
+  </head>
+  <body >
+    <iframe  src="./zh/rules.html" id="ifr" frameborder="0" width="100%" height="7049"></iframe>
+  </body>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const locale = urlParams.get('lang');
+    if(locale==null){
+      document.getElementById("ifr").src="./en/rules.html";
+    }else{
+      document.getElementById("ifr").src="./"+locale+"/rules.html";
+    }
+   
+    window.onmessage = function(event) {
+      console.log(event.data);
+      if(typeof event.data.data == "string"){
+        document.querySelector("#ifr").setAttribute("height",event.data.data);
+      }
+      if(event.data.topic == "setScrollValue"){
+       
+        window.scrollTo(0, event.data.data);
+      }
+    };
+
+  </script>
+</html>
