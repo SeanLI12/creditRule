@@ -4,45 +4,33 @@
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">ฟุตบอล</p>
     <p class="b sub" style="font-size:13px"><em>วันที่: 01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">กฎทั่วไป</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">ประเภทการเดิมพันหลัก</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">ประเภทประตู</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">ประเภทผู้เล่น</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">พิเศษ </a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">เตะมุม</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">จำนวนใบเตือน</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">ฟรีคิก</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">ลูกตั้งเตะ</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">การทุ่มลูก</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">เปลี่ยนตัวผู้เล่น</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">ล้ำหน้า</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">การเตะลูกโทษ</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">ประเภทการแข่งขัน</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">รวมตลาด</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">ประเภทการเดิมพันอื่นๆ</a></td>
-        <td><a href="#fantasymarket" style="color:#FFFFFF;">แฟนตาซี แมทช์</a></td>
-		<td><a href="#efootballmatches" style="color:#FFFFFF;">การแข่งขัน อี-ฟุตบอล</a></td>  
-      </tr>
-		   <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">สร้างบิลสเต็ป</a></td>
-
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">กฎทั่วไป</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;">กฎทั่วไป</a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">ประเภทการเดิมพันหลัก</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">ประเภทประตู</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">ประเภทผู้เล่น</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">พิเศษ </a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">เตะมุม</a></div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">จำนวนใบเตือน</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">ฟรีคิก</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">ลูกตั้งเตะ</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">การทุ่มลูก</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">เปลี่ยนตัวผู้เล่น</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">ล้ำหน้า</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">การเตะลูกโทษ</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">ประเภทการแข่งขัน</a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">รวมตลาด</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">ประเภทการเดิมพันอื่นๆ</a></div>
+        <div><a href="#fantasymarket" style="color:#FFFFFF;">แฟนตาซี แมทช์</a></div>
+	    	<div><a href="#efootballmatches" style="color:#FFFFFF;">การแข่งขัน อี-ฟุตบอล</a></div>  
+        <div><a href="#betbuilder" style="color:#FFFFFF;">สร้างบิลสเต็ป</a></div>  
+      </div>
+  </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">กฎทั่วไป</div>
     <ul style="list-style:decimal;">
       <li>การเดิมพันทั้งหมดของฟุตบอล การตัดสินจะต้องเป็นไปตามเวลาการแข่งขัน  90 นาที เว้นแต่จะระบุไว้เป็นอย่างอื่น</li>
@@ -61,7 +49,7 @@
       <li>หากกรณีไม่ทราบเวลาการแข่งขันที่แน่นอน (เช่น เนื่องจากมีการปรับกำหนดการออกอากาศ) เราขอสงวนสิทธิ์ในการปรับเปลี่ยนเวลาการแข่งขันใหม่ภายใน 72 ชั่วโมง ก่อนเวลาเริ่มการแข่งขันอย่างเป็นทางการ</li>
 		<li>ทั้งสองทีมต้องเริ่มการแข่งขันด้วยจำนวนผู้เล่นที่เท่ากัน การวางเดิมพันทั้งหมดถือว่าใช้ได้</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">ประเภทการเดิมพันหลัก </div>
     <p style="margin-left:15px; font-size:14px"><strong>แฮนดิแคป</strong></p>
     <p style="margin-left:30px;"><strong>กฎทั่วไป</strong>
@@ -551,7 +539,7 @@
     <ul style="list-style:decimal; margin-left:20px">
       <li>ทายผลทีมที่จะชนะการแข่งขันและหากผลหลังจบการแข่งขันเต็มเวลา 90 นาที การแข่งขันเสมอ การเดิมพันทั้งหมดจะได้รับคืนเงิน</li>
     </ul>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">เดิมพันทายผลประตู</div>
     <p style="margin-left:10px; font-size:14px"><strong>ประตูรวม </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -755,7 +743,7 @@
       <li>ตัดสินจากผู้เล่นของแต่ละทีมทำเข้าประตูตัวเอง </li>
       <li>หากการแข่งขันถูกยกเลิกก่อนมีการทำเข้าประตูตัวเอง  เดิมพันในระหว่างนั้นถือเป็นโมฆะ </li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">รายการผู้เล่น</div>
     <p style="margin-left:10px; font-size:14px"><strong>กฎทั่วไป (ผู้ทำประตูแรก / สุดท้าย / เวลาใดก็ได้)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -829,7 +817,7 @@
       <li>หากผู้เล่นไม่สามารถทำประตูได้  เช่น 0 ผลการตัดสินของตลาดนี้คือ “คู่”</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">รายการเดิมพันพิเศษ</div>
     <p style="margin-left:10px; font-size:14px"><strong>ทีมใดเตะลูกก่อน</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -901,7 +889,7 @@
       <li>หากแมทช์การแข่งขันถูกระงับในเวลาใดก็ตามภายในเวลาการแข่งขัน 90 นาที การวางเดิมพัน "รวมทดเวลาบาดเจ็บของแต่ละครึ่ง" ทั้งหมด ถือเป็นโมฆะ</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">ลูกเตะมุม</div>
     <p style="margin-left:10px; font-size:14px"><strong>ลูกเตะมุม: กฏทั่วไป</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1018,7 +1006,7 @@
         <li>"2" หมายถึง: ทีมเยือนชนะ</li>
       </ol>
     </ul>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">ใบเตือน / การ์ด</div>
     <p style="margin-left:10px; font-size:14px"><strong>จำนวนใบเตือน: กฏทั่วไป</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1153,7 +1141,7 @@
         <li>"2" หมายถึง: ทีมเยือนชนะ</li>
       </ol>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">ฟรีคิก</div>
     <p style="margin-left:10px; font-size:14px"><strong>เตะฟรีคิกครั้งแรก/ครั้งสุดท้าย</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1163,7 +1151,7 @@
       <li>หากแมทช์การแข่งขันถูกยกเลิกก่อนที่มีการเตะฟรีคิกครั้งแรก การวางเดิมพันทั้งหมดสำหรับ"การเตะฟรีคิกครั้งแรก"และ"การเตะฟรีคิกครั้งสุดท้าย"จะถือเป็นโมฆะ</li>
       <li>หากไม่มีทีมใดมีการเตะฟรีคิคเลยภายในการแข่งขันเต็มเวลาอย่างเป็นทางการ 90 นาที</li>
     </ul>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">ลูกตั้งเตะ</div>
     <p style="margin-left:10px; font-size:14px"><strong>ลูกตั้งเตะจากเขตประตูลูกแรก /ลูกสุดท้าย</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1173,7 +1161,7 @@
       <li>หากแมทช์การแข่งขันถูกยกเลิกก่อนที่จะมีลูกตั้งเตะจากเขตประตูลูกแรกเกิดขึ้น การวางเดิมพัน "ลูกตั้งเตะจากเขตประตูลูกแรก"และ "ลูกตั้งเตะจากเขตประตูลูกสุดท้าย"ถือเป็นโมฆะ</li>
       <li>หากแต่ละทีมไม่มีลูกตั้งเตะจากเขตประตูเกิดขึ้น ภายในการแข่งขันเต็มเวลา "90 นาที" การวางเดิมพันทั้งหมดของการเปลี่ยนตัวครั้งแรกและครั้งสุดท้ายถือเป็นโมฆะ</li>
     </ul>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">ลูกทุ่ม</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>ลูกทุ่มลูกแรก /ลูกทุ่มลูกสุดท้าย</strong></p>
@@ -1184,7 +1172,7 @@
       <li>หากแมทช์การแข่งขันถูกยกเลิกก่อนที่จะมีการเปลี่ยนตัวครั้งแรกเกิดขึ้น การวางเดิมพัน "การเปลี่ยนตัวครั้งแรก"และ "การเปลี่ยนตัวครั้งสุดท้าย"ถือเป็นโมฆะ</li>
       <li>หากแต่ละทีมไม่มีการเปลี่ยนตัวเกิดขึ้นภายในการแข่งขันเต็มเวลา "90 นาที" การวางเดิมพันทั้งหมดของการเปลี่ยนตัวครั้งแรกและครั้งสุดท้ายถือเป็นโมฆะ</li>
     </ul>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">การเปลี่ยนตัวผู้เล่น</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>เปลี่ยนตัวผู้เล่นครั้งแรก/ครั้งสุดท้าย</strong></p>
@@ -1196,7 +1184,7 @@
       <li>หากแมทช์การแข่งขันถูกยกเลิกก่อนที่จะมีการเปลี่ยนตัวครั้งแรกเกิดขึ้น การวางเดิมพัน "การเปลี่ยนตัวครั้งแรก"และ "การเปลี่ยนตัวครั้งสุดท้าย"ถือเป็นโมฆะ</li>
       <li>หากแต่ละทีมไม่มีการเปลี่ยนตัวเกิดขึ้นภายในการแข่งขันเต็มเวลา "90 นาที" การวางเดิมพันทั้งหมดของการเปลี่ยนตัวครั้งแรกและครั้งสุดท้ายถือเป็นโมฆะ</li>
     </ul>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">ล้ำหน้า</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>การล้ำหน้าลูกแรก / ลูกล้ำหน้าลูกสุดท้าย</strong></p>
@@ -1207,7 +1195,7 @@
       <li>หากแมทช์การแข่งขันถูกยกเลิกก่อนที่จะมีการล้ำหน้าครั้งแรก การวางเดิมพันทั้งหมดของ "ล้ำหน้าครั้งแรก"และ "ล้ำหน้าครั้งสุดท้าย"จะถือว่าเป็นโมฆะ</li>
       <li>หากแต่ละทีมไม่มีการล้ำหน้าเกิดขึ้นเลยภายในการแข่งขันเต็มเวลา"90 นาที" การวางเดิมพันทั้งหมดถือเป็นโมฆะ การวางเดิมพันทั้งหมดของล้ำหน้าครั้งแรกและครั้งสุดท้ายถือเป็นโมฆะ</li>
     </ul>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">ประเภทวางเดิมพันลูกโทษ</div>
     <p style="margin-left:10px; font-size:14px"><strong>กฎทั่วไป</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1277,7 +1265,7 @@
       <li> หากการแข่งขันถูกเลิก ก่อนที่จะมีการประกาศผลออกมา การเดิมพันทั้งหมดจะถือเป็นโมฆะ</li>
     </ul>
     <p>&nbsp;</p>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">ประเภทเดิมพันการแข่งขัน</div>
     <p style="margin-left:10px; font-size:14px"><strong>ลีก : กฏทั่วไป</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1567,7 +1555,7 @@
       <li>หากไม่มีกลุ่มใดชนะบิลเดิมพันจะตัดสินเป็นโมฆะ</li>
     </ul>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">รวมตลาด</div>
     <p style="margin-left:20px;"><strong>1 X 2 และ ประตูรวม สูง / ต่ำ</strong>
     </p><ul style="list-style:decimal; margin-left:20px">
@@ -1667,7 +1655,7 @@
       <li>หากการแข่งขันถูกยกเลิกก่อนการประกาศผลใดๆ เดิมพันทั้งหมดถือเป็นโมฆะ</li>
     </ul>
     <p></p>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">รายการอื่นๆ</div>
     <p style="margin-left:10px; font-size:14px"><strong>ผลรวมทีมเจ้าบ้านและทีมเยือนในลีกนั้นๆ</strong></p>
     <p style="margin-left:10px">ในบางลีก บริษัทจะนำเสนอให้สมาชิกมีโอกาสวางเดิมพันในรายการที่เกิดขึ้นโดยกำหนดผลของรายการที่เกิดขึ้นรวมกน สำหรับการวางเดิมพันตลาดนี้จะรวมผลการพบกันของทีมเจ้าบ้านและทีมเยือนทั้งหมด เพื่อความเป็นกลางในการแข่งขัน ทีมที่ 1 จะได้รับการพิจารณาให้เป็นทีม “เจ้าบ้าน” สำหรับการเดิมพันตลาดนี้ และด้านล่างนี้จะเป็นรายละเอียดของกฎสำหรับประเภทการวางเดิมพันที่เรานำเสนอ </p>
@@ -1700,7 +1688,7 @@
     </p><ul style="list-style:decimal; margin-left:20px">
       <li>ทายผลรวมของจำนวนประตูสำหรับทั้งสองที่เลือกจะสูงหรือต่ำกว่าที่ระบุไว้</li>
     </ul>
-    <a name="fantasymarket"></a>
+    <a id="fantasymarket"></a>
     <div class="sbk-rules-title">แฟนตาซี แมทช์</div>
 <!--    <p style="margin-left:10px; font-size:14px"><strong>แฟนตาซี แมทช์</strong></p>-->
     <p style="margin-left:10px">คือ การนำ 2 ทีม ของแมทช์การแข่งขันที่เกิดขึ้นจริง 2
@@ -1712,7 +1700,7 @@
       <li>ทีมเจ้าบ้านหรือทีมเยือน ไม่มีผลกระทบต่อการพิจารณาและตัดสินของการแข่งขันแบบแฟนตาซีแมทช์</li>
       <li>ผลการแข่งขันแฟนตาซีแมทช์ ใช้การตัดสินเดียวกับการเดิมพันกีฬาทั่วไปที่ระบุไว้ข้างต้น</li>
     </ul>
- <a name="efootballmatches"></a>
+ <a id="efootballmatches"></a>
         <div class="sbk-rules-title">การแข่งขัน อี-ฟุตบอล</div>
         <ul style="list-style:decimal; margin-left:20px">
             <li>การแข่งขันนี้อาจมีให้เดิมพันในเกมจำลองหรือในรูปแบบของผู้เล่นแข่งกับผู้เล่น</li>
@@ -1723,7 +1711,7 @@
         </ul>
     
 
- <a name="betbuilder"></a>
+ <a id="betbuilder"></a>
     <div class="sbk-rules-title">สร้างบิลสเต็ป</div>
         <ul style="list-style:decimal; margin-left:20px">
             <li>สร้างบิลสเต็ป ใช้ได้กับการแข่งขันและประเภทเดิมพันที่กำหนดไว้เท่านั้น อาจถูกถอดออกหรือปิดใช้งานชั่วคราวได้ตลอดเวลา </li>

@@ -1,10 +1,8 @@
 import express from 'express';
-import cheerio from 'cheerio';
 import fs from 'fs-extra';
 import { dirname } from 'path';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import phantom from 'phantom';
 
 import bodyParser from 'body-parser';
 

@@ -1,53 +1,42 @@
 <html><head></head><body>﻿<!-- <link rel="stylesheet" type="text/css" href="//doc.188contents.com/contents/Components/webteam/webteam.css" /> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <link rel="stylesheet" type="text/css" href="http://doc.188contents.com/contents/Components/webteam/webteam.css" /> -->
 <link rel="stylesheet" href="../../css/rules-style.css">
+<script src="../../js/subdropdown.js"></script>
 <div>
     <div ng-include="sbkbettingRulesUrl"></div>
     <div class="maindiv stlnt en-gb font16">
         <p class="b sub" id="pagetop">FOOTBALL</p>
         <p class="b sub" style="font-size:13px"><em>Last Update: 01/10/2022</em></p>
-        <table id="linktable" class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-            <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#generalrules" style="color:#FFFFFF;">General Rules</a></td>
-                <td><a href="#mainmarkets" style="color:#FFFFFF;">Main Markets</a></td>
-                <td><a href="#goalmarkets" style="color:#FFFFFF;">Goal Markets</a></td>
-            </tr>
-            <tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#playersmarkets" style="color:#FFFFFF;">Players Markets</a></td>
-                <td><a href="#specials" style="color:#FFFFFF;">Specials</a></td>
-                <td><a href="#corners" style="color:#FFFFFF;">Corners</a></td>
-            </tr>
-            <tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#bookingscards" style="color:#FFFFFF;">Bookings / Cards</a></td>
-                <td><a href="#freekicks" style="color:#FFFFFF;">Free Kicks</a></td>
-                <td><a href="#goalkicks" style="color:#FFFFFF;">Goal Kicks</a></td>
-            </tr>
-            <tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#throwins" style="color:#FFFFFF;">Throw-Ins</a></td>
-                <td><a href="#substitutions" style="color:#FFFFFF;">Substitutions</a></td>
-                <td><a href="#offsides" style="color:#FFFFFF;">Offsides</a></td>
-            </tr>
-            <tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#penaltymarkets" style="color:#FFFFFF;">Penalty Markets</a></td>
-                <td><a href="#competitionmarkets" style="color:#FFFFFF;">Competition Markets</a></td>
-                <td><a href="#CombinedMarkets" style="color:#FFFFFF;">Combined Markets</a></td>
-            </tr>
-            <tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#othermarkets" style="color:#FFFFFF;">Other Markets</a></td>
-                <td><a href="#fantasymatches" style="color:#FFFFFF;">Fantasy Matches</a></td>
-                <td><a href="#efootballmatches" style="color:#FFFFFF;">E-Football Matches</a></td>
-            </tr>
-			
-			
-			<tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#betbuilder" style="color:#FFFFFF;">Bet Builder</a></td>
+        <div class="rules-dropdown" id="myDropdownSub">
+            <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">General Rules</div>
+            <div id="linktable" class="tblrules">
+                <div><a href="#generalrules" style="color:#FFFFFF;">General Rules</a></div>
+                <div><a href="#mainmarkets" style="color:#FFFFFF;">Main Markets</a></div>
+                <div><a href="#goalmarkets" style="color:#FFFFFF;">Goal Markets</a></div>
+                <div><a href="#playersmarkets" style="color:#FFFFFF;">Players Markets</a></div>
+                <div><a href="#specials" style="color:#FFFFFF;">Specials</a></div>
+                <div><a href="#corners" style="color:#FFFFFF;">Corners</a></div>
+                <div><a href="#bookingscards" style="color:#FFFFFF;">Bookings / Cards</a></div>
+                <div><a href="#freekicks" style="color:#FFFFFF;">Free Kicks</a></div>
+                <div><a href="#goalkicks" style="color:#FFFFFF;">Goal Kicks</a></div>
+                <div><a href="#throwins" style="color:#FFFFFF;">Throw-Ins</a></div>
+                <div><a href="#substitutions" style="color:#FFFFFF;">Substitutions</a></div>
+                <div><a href="#offsides" style="color:#FFFFFF;">Offsides</a></div>
+                <div><a href="#penaltymarkets" style="color:#FFFFFF;">Penalty Markets</a></div>
+                <div><a href="#competitionmarkets" style="color:#FFFFFF;">Competition Markets</a></div>
+                <div><a href="#CombinedMarkets" style="color:#FFFFFF;">Combined Markets</a></div>
+                <div><a href="#othermarkets" style="color:#FFFFFF;">Other Markets</a></div>
+                <div><a href="#fantasymatches" style="color:#FFFFFF;">Fantasy Matches</a></div>
+                <div><a href="#efootballmatches" style="color:#FFFFFF;">E-Football Matches</a></div>
+                <div><a href="#betbuilder" style="color:#FFFFFF;">Bet Builder</a></div>
                 
-            </tr>
-        </tbody></table>
+            </div>
+        </div>
+        
         <br>
         <br>
-        <a name="generalrules"></a>
+        <a id="generalrules"></a>
         <div class="sbk-rules-title">General Rules</div>
         <ul style="list-style:decimal;">
             <li>Unless otherwise stated, all Football bets will be settled based on the scheduled "90 minutes" play.</li>
@@ -66,7 +55,7 @@
             <li>Should the exact start time of a match be unknown (e.g. due to TV scheduling), we reserve the right to adjust the original stated time, once it is within 72 hours of the official start time.</li>
             <li>Both teams must start a match with the same number of players for all bets to be considered valid.</li>
         </ul>
-        <a name="mainmarkets"></a>
+        <a id="mainmarkets"></a>
         <div class="sbk-rules-title">Main Markets</div>
         <p style="margin-left:15px; font-size:14px"><strong>Handicap</strong></p>
         <p style="margin-left:30px;">
@@ -594,7 +583,7 @@
             <li>Predict the team to win the match and if the final result after the full "90 minutes" of play is a draw, all bets will be refunded. </li>
         </ul>
         <br>
-        <a name="goalmarkets"></a>
+        <a id="goalmarkets"></a>
         <div class="sbk-rules-title">Goal Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>Total Goals </strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -805,7 +794,7 @@
             <li>Settlement  will be based on any active player from either team being recorded as scoring  an own goal.</li>
             <li>If  the match is abandoned before any own goal is recorded, then any bets on this  market will be considered void.</li>
         </ul>
-        <a name="playersmarkets"></a>
+        <a id="playersmarkets"></a>
         <div class="sbk-rules-title">Player Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>General Rules (First / Last / Anytime Goal Scorer)</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -884,7 +873,7 @@
                 <li>If either player fails to score a goal, i.e. 0, then the market will be settled as 'Even'.</li>
             </ul>
         <p></p>
-        <a name="specials"></a>
+        <a id="specials"></a>
         <div class="sbk-rules-title">Specials</div>
         <p style="margin-left:10px; font-size:14px"><strong>Team to Kick Off</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -976,7 +965,7 @@
                 <li>If a match is abandoned anytime within the official "90 minutes" of play, all bets on "Total Injury Time Awarded for Both Halves" will be considered void.</li>
             </ul>
         <p></p>
-        <a name="corners"></a>
+        <a id="corners"></a>
         <div class="sbk-rules-title">Corners</div>
         <p style="margin-left:10px; font-size:14px"><strong>Corners: General Rules</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1094,7 +1083,7 @@
                 <li>"2" indicates: Away win. </li>
             </ol>
         </ul>
-        <a name="bookingscards"></a>
+        <a id="bookingscards"></a>
         <div class="sbk-rules-title">Bookings / Cards</div>
         <p style="margin-left:10px; font-size:14px"><strong>Bookings: General Rules</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1231,7 +1220,7 @@
                 <li>"2" indicates: Away win. </li>
             </ol>
         </ul>
-        <a name="freekicks"></a>
+        <a id="freekicks"></a>
         <div class="sbk-rules-title">
             Free Kicks
             <br>
@@ -1247,7 +1236,7 @@
                 
             </li>
         </ul>
-        <a name="goalkicks"></a>
+        <a id="goalkicks"></a>
         <div class="sbk-rules-title">
             Goal Kicks<br>
         </div>
@@ -1271,7 +1260,7 @@
             <li>If a match is abandoned before the first throw-in is taken, all bets on the "First Throw-in" and "Last Throw-in" will be considered void.</li>
             <li>
                 If there is no throw-in taken by either team within the official "90 minutes" of play, all bets placed on the "First / Last Throw-in" markets will be considered void.<br>
-                <a name="substitutions"></a>
+                <a id="substitutions"></a>
             </li>
         </ul>
         <div class="sbk-rules-title">
@@ -1286,7 +1275,7 @@
             <li>If a match is abandoned before the first substitution is made, all bets on the "First Substitution" and "Last Substitution" will be considered void.</li>
             <li>If there is no substitution taken by either team within the official "90 minutes" of play, all bets placed on the "First / Last Substitution" markets will be considered void.</li>
         </ul>
-        <a name="offsides"></a>
+        <a id="offsides"></a>
         <div class="sbk-rules-title">
             Offsides
             <br>
@@ -1299,7 +1288,7 @@
             <li>If a match is abandoned before the first offside, all bets on the "First Offside" and "Last Offside" will be considered void.</li>
             <li>If there are no offside's by either team within the official "90 minutes" of play, all bets placed on the "First / Last Offside" markets will be considered void.</li>
         </ul>
-        <a name="penaltymarkets"></a>
+        <a id="penaltymarkets"></a>
         <div class="sbk-rules-title">Penalty Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>General Rules</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1378,7 +1367,7 @@
             <li>If the match is abandoned before any result has been declared, then any bets on this market will be considered void.</li>
         </ul>
         <p>&nbsp;</p>
-        <a name="competitionmarkets"></a>
+        <a id="competitionmarkets"></a>
         <div class="sbk-rules-title">Competition Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>League: General Rules</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1677,7 +1666,7 @@
             <li> Should no group winner be declared, all bets will be void.</li>
         </ul>
         <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-        <p style="margin-left:10px; font-size:14px"><a name="CombinedMarkets"></a> </p>
+        <p style="margin-left:10px; font-size:14px"><a id="CombinedMarkets"></a> </p>
         <div class="sbk-rules-title">Combined Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; Goals Over / Under</strong></p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1756,7 +1745,7 @@
             </li>
             <li>If the match is abandoned before any result has been declared, then any bets on this market will be considered void.</li>
         </ul>
-        <a name="othermarkets"></a>
+        <a id="othermarkets"></a>
         <div class="sbk-rules-title">Other Markets</div>
         <p style="margin-left:10px; font-size:14px"><strong>Total Home and Away Team in a Particular League</strong></p>
         <p style="margin-left:10px">In certain leagues, the company will offer the member the opportunity to bet across events to determine the outcome of the events combined. This market combines all the home team results against all the away team results. For neutral matches, Team 1 will be considered the 'Home Team' for this market. Below is a breakdown of the rules for the individual bet types we offer. </p>
@@ -1799,7 +1788,7 @@
                 <li>Predict whether the total number of goals for both selections will be over or under the indicated line.</li>
             </ul>
         <p></p>
-        <a name="fantasymatches"></a>
+        <a id="fantasymatches"></a>
         <div class="sbk-rules-title">Fantasy Matches</div>
         <p>These are events where two teams, from two separate matches are paired together for predicting imaginary market type outcomes.</p>
         <ul style="list-style:decimal; margin-left:20px">
@@ -1809,7 +1798,7 @@
             <li>Home or Away venue has no consideration or impact on the result and settlement of a Fantasy Match.</li>
             <li>For any fantasy market offered, settlement will obey the specific market type rules listed above.</li>
         </ul>
-        <a name="efootballmatches"></a>
+        <a id="efootballmatches"></a>
         <div class="sbk-rules-title">E-Football Matches</div>
         <ul style="list-style:decimal; margin-left:20px">
             <li>These matches may be offered in virtual simulation or player v player format.</li>
@@ -1819,7 +1808,7 @@
             <li>The ordering of team names (Home or Away) will not be relevant to E-Football Match settlement. For example, if our fixture states Team 1 v Team 2, but the Official Competition states Team 2 v Team 1, all wagers will be valid.</li>
         </ul>
 
-  <a name="betbuilder"></a>
+  <a id="betbuilder"></a>
       <div class="sbk-rules-title">Bet Builder</div>
         <ul style="list-style:decimal; margin-left:20px">
             

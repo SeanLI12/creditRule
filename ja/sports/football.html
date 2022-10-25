@@ -6,45 +6,35 @@
   <div class="maindiv stlnt en-gb font16"><br>
     <p class="b sub" id="pagetop">フットボール</p>
     <p class="b sub" style="font-size:13px"><em>日付:01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">一般規則</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">メイン マーケット</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">ゴール マーケット</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">プレーヤー マーケット</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">スペシャル</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">コーナー</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">ブッキング / カード</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">フリー キック</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">ゴール キック</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">スローイン</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">サブスティチューション</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">オフサイド</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">ペナルティー マーケット</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">コンペティション マーケット</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">結合されたマーロロット</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">その他のマーケット </a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">ファンタジー・マッチ </a></td>
-        <td><a href="#efootballmatches" style="color:#FFFFFF;">E-フットボールマッチ</a></td>
-      </tr>
-			<tr bgcolor="#333333" style="color:#FFFFFF;">
-                <td><a href="#betbuilder" style="color:#FFFFFF;">ベットビルダー</a></td>
-                
-            </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">General Rules</div>
+      <div id="linktable" class="tblrules">
+          <div><a href="#generalrules" style="color:#FFFFFF;">一般規則</a></div>
+          <div><a href="#mainmarkets" style="color:#FFFFFF;">メイン マーケット</a></div>
+          <div><a href="#goalmarkets" style="color:#FFFFFF;">ゴール マーケット</a></div>
+          <div><a href="#playersmarkets" style="color:#FFFFFF;">プレーヤー マーケット</a></div>
+          <div><a href="#specials" style="color:#FFFFFF;">スペシャル</a></div>
+          <div><a href="#corners" style="color:#FFFFFF;">コーナー</a></div>
+          <div><a href="#bookingscards" style="color:#FFFFFF;">ブッキング / カード</a></div>
+          <div><a href="#freekicks" style="color:#FFFFFF;">フリー キック</a></div>
+          <div><a href="#goalkicks" style="color:#FFFFFF;">ゴール キック</a></div>
+          <div><a href="#throwins" style="color:#FFFFFF;">スローイン</a></div>
+          <div><a href="#substitutions" style="color:#FFFFFF;">サブスティチューション</a></div>
+          <div><a href="#offsides" style="color:#FFFFFF;">オフサイド</a></div>
+          <div><a href="#penaltymarkets" style="color:#FFFFFF;">ペナルティー マーケット</a></div>
+          <div><a href="#competitionmarkets" style="color:#FFFFFF;">コンペティション マーケット</a></div>
+          <div><a href="#CombinedMarkets" style="color:#FFFFFF;">結合されたマーロロット</a></div>
+          <div><a href="#othermarkets" style="color:#FFFFFF;">その他のマーケット </a></div>
+          <div><a href="#fantasymatches" style="color:#FFFFFF;">ファンタジー・マッチ </a></div>
+          <div><a href="#efootballmatches" style="color:#FFFFFF;">E-フットボールマッチ</a></div>
+          <div><a href="#betbuilder" style="color:#FFFFFF;">ベットビルダー</a></div>
+          
+      </div>
+  </div>
+    
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">一般規則</div>
     <ul style="list-style:decimal;">
       <li>特に明記されていない限り、すべてのフットボールのベットは、予定された「90分」のプレーに基づいて確定されます。 </li>
@@ -63,7 +53,7 @@
       <li>万が一、試合の正確な開始時間が分からない場合(例.TVスケジュールの影響など)、正式な開始時間から72時間以内になった時点で、我々は元の表示時間を調整する権利を有します。</li>
       <li>全てのベットが有効であると見なされるには、両チームが同じ数のプレイヤーで試合が開始される必要があります。 </li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">メイン・マーケット</div>
     <p style="margin-left:15px; font-size:14px"><strong>ハンディキャップ </strong></p>
     <p style="margin-left:30px;"><strong>一般規則</strong>
@@ -560,7 +550,7 @@
       <li>どのチームが試合で勝つかを予想し、もし「90分」プレー後の最終結果がドローの場合、すべてのベットは返金されます。</li>
     </ul>
     <br>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">ゴール・マーケット</div>
     <p style="margin-left:10px; font-size:14px"><strong>トータル・ゴール</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -768,7 +758,7 @@
       <li>もしオウンゴールが記録される前に試合が放棄された場合、このマーケットに賭けられたベットは無効になると考慮されます。 </li>
     </ol>
     <p>&nbsp;</p>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">プレイヤー マーケット</div>
     <p style="margin-left:10px; font-size:14px"><strong>基本ルール (ファースト/ラスト/常時 得点した選手)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -847,7 +837,7 @@
       <li>もしどちらの選手もゴールを得点しなかった場合、マーケットは「偶数」として確定します。</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">スペシャル</div>
     <p style="margin-left:10px; font-size:14px;"><strong> キックオフをするチーム</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -922,7 +912,7 @@
       <li>もし公式「90分」プレー内で試合が放棄された場合、すべての「トータル・インジャリー・タイム・アワード・フォー・ボス・ハーフ」のベットは無効になると考えられます。</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">コーナー</div>
     <p style="margin-left:10px; font-size:14px"><strong>コーナー：一般ルール</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1041,7 +1031,7 @@
       </li>
     </ul>
     <br>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">ブッキング / カード</div>
     <p style="margin-left:10px; font-size:14px"><strong>ブッキング : 一般規則</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1178,7 +1168,7 @@
       </li>
     </ul>
     <br>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">フリーキック</div>
     <p style="margin-left:10px; font-size:14px"><strong>ファースト・フリーキック / ラスト・フリーキック（最初/最後に蹴るフリーキック）</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1188,7 +1178,7 @@
       <li>もしファースト・フリーキックが蹴られる前に試合が放棄された場合、すべての「ファースト・フリーキック」と「ラスト・フリーキック」は無効になると考えられます。 </li>
       <li>もし公式「90分」内のプレーで、どちらのチームもフリーキックが蹴られなかった場合、「ファースト（最初）/ラスト（最後）のフリーキック」マーケットに賭けられたベットは無効になると考えられます。<strong> </strong></li>
     </ul>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">ゴールキック<br>
     </div>
     <p style="margin-left:10px; font-size:14px"><strong>ファースト・ゴールキック / ラスト・ゴールキック（最初のゴールキック/最後のゴールキック）</strong></p>
@@ -1199,7 +1189,7 @@
       <li>もしファースト・ゴールキックが蹴られる前に試合が放棄された場合、すべての「ファースト・ゴールキック」と「ラスト・ゴールキック」は無効になると考慮されます。 </li>
       <li>もし公式「90分」プレー内で、どちらのチームもゴールキックを蹴らなかった場合、「ファースト（最初）/ラスト（最後）・ゴールキック」マーケットのすべてのベットは無効になると考えられます。 </li>
     </ul>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">スローイン</div>
     <p style="margin-left:10px; font-size:14px"><strong>ファースト・スローイン / ラスト・スローイン（最初のスローイン/最後のスローイン）</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1209,7 +1199,7 @@
       <li>もしファースト・スローインが投げられる前に試合が放棄された場合、「ファースト・スローイン（最初のスローイン）」と「ラスト・スローイン（最後のスローイン）」のすべてのベットは無効になると考えられます。</li>
       <li>もし公式「90分」プレー内で、どちらのチームもスローインを投げなかった場合、「ファースト/ラスト・スローイン」マーケットのすべてのベットは無効になると考えられます。</li>
     </ul>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">サブスティチューション（選手交代）</div>
     <p style="margin-left:10px; font-size:14px"><strong>ファースト・サブスティチューション/ ラスト・サブスティチューション（最初の交代/最後の交代）</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1220,7 +1210,7 @@
       <li>もしファースト・サブスティチューション（最初の交代）がある前に試合が放棄された場合、「ファースト・サブスティチューション（最初の交代）」と「ラスト・サブスティチューション（最後の交代）」のすべてのベットは無効になると考えられます。 </li>
       <li>もし公式「90分」プレー内で、どちらのチームもサブスティチューションがない場合、「ファースト/ラスト・サブスティチューション（最初/最後の交代）」マーケットに賭けられたすべてのベットは無効になると考えられます。 </li>
     </ul>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">オフサイド</div>
     <p style="margin-left:10px; font-size:14px"><strong>ファースト・オスサイド / ラスト・オフサイド（最初のオフサイド/最後のオフサイド）</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1230,7 +1220,7 @@
       <li>もしファースト・オフサイド（最初のオフサイド）がある前に試合が放棄された場合、「ファースト・オスサイド（最初のオフサイド）」と「ラスト・オフサイド（最後のオフサイド）」のすべてのベットは無効になると考えられます。 </li>
       <li>もし公式「90分」プレー内で、どちらのチームにもオフサイドが無ければ、「ファースト・オフサイド（最初のオフサイド）/ラスト・オフサイド（最後のオフサイド）」マーケットのすべてのベットは無効になると考えられます。</li>
     </ul>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">ペナルティー・マーケット</div>
     <p style="margin-left:10px; font-size:14px"><strong>一般ルール</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1302,7 +1292,7 @@
       <li>結果が発表される前に試合が放棄された場合、このマーケットのベットは無効とみなされます。 </li>
     </ul>
     <p>&nbsp;</p>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">コンペティション・マーケット</div>
     <p style="margin-left:10px; font-size:14px"><strong>リーグ : 一般規則</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1600,7 +1590,7 @@
     </ul>
     <br>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">結合されたマーロロット</div>
     <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; ゴール・オーバー / アンダー</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1679,7 +1669,7 @@
       <li>もし結果が発表される前に試合が放棄された場合、このマーケットに賭けられたベットは無効になると考慮されます。</li>
     </ul>
     <br>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">その他のマーケット </div>
     <p style="margin-left:10px; font-size:14px"><strong>トータル・ホーム＆アウェイ・チーム・イン・ア・パーティキュラー・リーグ（特定のリーグでホームとアウェイチームの合計）</strong></p>
     <p style="margin-left:10px">特定のリーグで、組み合わされたイベントの結果を決めるために、イベントを通してメンバーにベットをする機会を提供しております。このマーケットは、すべてのアウェイチームの結果に対してすべてのホームチームの結果を組み合わせたものです。中立の試合では、このマーケットのチーム1が「ホームチーム」と考えられます。以下は、当社が提供する個々のベットタイプのルールの内訳となります。</p>
@@ -1719,7 +1709,7 @@
       <li>両セクションのゴールの合計数が指定の数字を超えるか（オーバー）、超えないか（アンダー）を予想します。</li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title">ファンタジー・マッチ</div>
     <p style="margin-left:20px;">2つの異なる試合から1チームずつ選び、その2チームが対戦した場合の架空の結果を予想します。</p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1729,7 +1719,7 @@
       <li>ファンタジー・マッチにおけるホーム又はアウェイは、試合結果やベットの確定に影響はありません。</li>
       <li>ファンタジー・マーケットで提供されているベットの確定は、上記に記載されている特定のマーケットルールに従います。</li>
     </ul>
-    <a name="efootballmatches"></a>
+    <a id="efootballmatches"></a>
     <div class="sbk-rules-title">
       <p> <strong>E-</strong><strong>フットボールマッチ</strong></p>
     </div>
@@ -1741,7 +1731,7 @@
       <li>チーム名（ホームまたはアウェイ）の順序は、Eフットボールの試合の結果には関係しません。例えば、スポーツページでの表示の順番がチーム1 vs チーム2の場合に、公式大会ではチーム2 vs チーム1の順序で表示されていたとしても、全てのベットが有効になります。</li>
     </ul>
 
- <a name="betbuilder"></a>
+ <a id="betbuilder"></a>
     <div class="sbk-rules-title">
       <p> <strong>ベットビルダー</strong></p>
     </div>

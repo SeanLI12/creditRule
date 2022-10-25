@@ -5,45 +5,34 @@
   <div class="maindiv stlnt en-gb">
     <p class="b sub" id="pagetop">足球</p>
     <p class="b sub" style="font-size:13px"><em>日期: 10/01/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">一般规则</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">主要市场</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">进球集锦</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">球员</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">特别</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">角球</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">牌/卡</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">任意球</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">射门</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">界外球</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">替换</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">越位</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">点球</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">比赛</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">综合市场</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">其他</a></td>
-        <td><a href="#fantasymarkets" style="color:#FFFFFF;">奇幻赛事</a></td>
-        <td><a href="#efootballmatches" style="color:#FFFFFF;">电竞足球赛事</a></td>
-      </tr>
-		<tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">盘口编辑器</a></td>
-     
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">一般规则</div>
+      <div id="linktable" class="tblrules">
+          <div><a href="#generalrules" style="color:#FFFFFF;">一般规则</a></div>
+          <div><a href="#mainmarkets" style="color:#FFFFFF;">主要市场</a></div>
+          <div><a href="#goalmarkets" style="color:#FFFFFF;">进球集锦</a></div>
+          <div><a href="#playersmarkets" style="color:#FFFFFF;">球员</a></div>
+          <div><a href="#specials" style="color:#FFFFFF;">特别</a></div>
+          <div><a href="#corners" style="color:#FFFFFF;">角球</a></div>
+          <div><a href="#bookingscards" style="color:#FFFFFF;">牌/卡</a></div>
+          <div><a href="#freekicks" style="color:#FFFFFF;">任意球</a></div>
+          <div><a href="#goalkicks" style="color:#FFFFFF;">射门</a></div>
+          <div><a href="#throwins" style="color:#FFFFFF;">界外球</a></div>
+          <div><a href="#substitutions" style="color:#FFFFFF;">替换</a></div>
+          <div><a href="#offsides" style="color:#FFFFFF;">越位</a></div>
+          <div><a href="#penaltymarkets" style="color:#FFFFFF;">点球</a></div>
+          <div><a href="#competitionmarkets" style="color:#FFFFFF;">比赛</a></div>
+          <div><a href="#CombinedMarkets" style="color:#FFFFFF;">综合市场</a></div>
+          <div><a href="#othermarkets" style="color:#FFFFFF;">其他</a></div>
+          <div><a href="#fantasymarkets" style="color:#FFFFFF;">奇幻赛事</a></div>
+          <div><a href="#efootballmatches" style="color:#FFFFFF;">电竞足球赛事</a></div>
+          <div><a href="#betbuilder" style="color:#FFFFFF;">盘口编辑器</a></div>
+      </div>
+  </div>
+
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">一般规则</div>
     <ul style="list-style:decimal;">
       <li>除非另有注明，所有足球投注的结算皆以球赛所规定的完场时间90分钟为准。 </li>
@@ -62,7 +51,7 @@
       <li>若赛事的确切开赛时间不明（比如，由于电视直播时间安排的问题），要是在原本开赛时间的72小时之内，本平台保留调整该开赛时间的权利。</li>
       <li>双方球员人数必须在比赛正式开始时都是相同，注单方可视为有效。</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">主要市场</div>
     <p style="margin-left:15px; font-size:14px"><strong>让球盘</strong></p>
     <p style="margin-left:30px;"> <strong>一般规则</strong>
@@ -557,7 +546,7 @@
     <ul style="list-style:decimal; margin-left:20px">
       <li>预测哪一支球队将在比赛胜出。但若比赛结果为平局，所有投注将被取消。</li>
     </ul>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">进球集锦</div>
     <p style="margin-left:10px; font-size:14px"><strong>总进球数</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -768,7 +757,7 @@
       <li>根据双方球队上场球员是否踢进乌龙球，来进行结算。</li>
       <li>如果比赛在有乌龙球之前中断，所有该盘口的投注将被视为无效</li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">球员</div>
     <p style="margin-left:10px; font-size:14px"><strong>一般规则（第一/最后/任何时间进球得分）</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -842,7 +831,7 @@
       <li>若比赛没有球员进球，赛果为0，投注‘双’注单为赢。</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">特别</div>
     <p style="margin-left:10px; font-size:14px"><strong>开球球队</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -931,7 +920,7 @@
       <li>如果赛事在官方时间90分钟之内中断，所有投注双半场总伤停补时的注单将会取消。</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">角球</div>
     <p style="margin-left:10px; font-size:14px"><strong>角球：一般规则</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1043,7 +1032,7 @@
         </ol>
       </li>
     </ul>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">牌/卡</div>
     <p style="margin-left:10px; font-size:14px"><strong>罚牌：一般规则</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1179,7 +1168,7 @@
         </ul>
       </li>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">任意球</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>最先/最后任意球</strong></p>
@@ -1191,7 +1180,7 @@
       <li>如果在90分钟完场时间内并未发出任何任意球，所有第一个和最后一个任意球的注单将被取消。</li>
     </ul>
     <br>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">射门</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>最先/最后球门球</strong></p>
@@ -1203,7 +1192,7 @@
       <li>如果在90分钟完场时间内并未发出任何球门球，所有第一个和最后一个球门球的注单将被取消。</li>
     </ul>
     <br>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">界外球</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>最先/最后界外球</strong></p>
@@ -1215,7 +1204,7 @@
       <li>如果在90分钟完场时间内并未发出任何界外球，所有第一个和最后一个界外球的注单将被取消。</li>
     </ul>
     <br>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">替补</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>最先/最后替补</strong></p>
@@ -1228,7 +1217,7 @@
       <li>如果在90分钟完场时间内并未任何替补，所有第一个和最后一个替补的注单将被取消。</li>
     </ul>
     <br>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">越位 </div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>最先/最后越位</strong></p>
@@ -1240,7 +1229,7 @@
       <li>如果在90分钟完场时间内并未有任何球员越位，所有第一个和最后一个越位的注单将被取消。</li>
     </ul>
     <br>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">点球</div>
     <!--start of delete-->
     <p style="margin-left:10px; font-size:14px"><strong>一般规则</strong></p>
@@ -1314,7 +1303,7 @@
       <li>如果在赛果公布之前比赛中断，所有该盘口的投注将被视为无效 </li>
     </ul>
     <p>&nbsp;</p>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">比赛</div>
     <p style="margin-left:10px; font-size:14px"><strong>联赛：一般规则</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1613,7 +1602,7 @@
       <li>如果官方没有宣布获胜者，所有投注将会被取消。</li>
     </ul>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <p><a name="CombinedMarkets"></a> </p>
+    <p><a id="CombinedMarkets"></a> </p>
     <div class="sbk-rules-title">综合市场</div>
     <p style="margin-left:10px; font-size:14px"><strong>独赢 &amp; 进球 大/小</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1698,7 +1687,7 @@
       </ul>
       <li> 如果在赛果公布之前比赛中断，所有该盘口的投注将被视为无效。</li>
     </ul>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">其他</div>
     <p style="margin-left:10px; font-size:14px"><strong>特定联赛里主客队的总进球数</strong></p>
     <p style="margin-left:10px">本公司在某些联赛里会提供某种结合性赛事结果的投注。盘口的玩法将结合主场与客场球队在整个联赛里的赛果之后分出胜负。中立场的比赛，第一个球队被视为这一场赛事的主队。以下列出所提供的个别替补玩法规则。</p>
@@ -1731,7 +1720,7 @@
       <li>预测主客队的总进球数将大于或小于在盘口指定的大/小盘牌数。</li>
     </ul>
     <p></p>
-    <a name="fantasymarkets"></a>
+    <a id="fantasymarkets"></a>
     <div class="sbk-rules-title">奇幻赛事</div>
     <p style="margin-left:10px; font-size:14px"><strong>奇幻赛事是以2个不同赛事的2场比赛为组合进行结果预测的竞猜游戏。</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1741,7 +1730,7 @@
       <li>主\客场因素将不作为影响奇幻赛事的影响因素。</li>
       <li>奇幻赛事所有内容将遵守以上赛事规则。</li>
     </ul>
-    <a name="efootballmatches"></a>
+    <a id="efootballmatches"></a>
     <div class="sbk-rules-title">电竞足球赛事</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>比赛将以虚拟或真实玩家对决(PVP)模式开打.</li>
@@ -1751,7 +1740,7 @@
       <li>主/客场排序将不影响结算。例：赛事注明一队对垒二队，但官方显示二队对垒一队，投注仍视为有效。</li>
     </ul>
 
- <a name="betbuilder"></a>
+ <a id="betbuilder"></a>
     <div class="sbk-rules-title">盘口编辑器</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>盘口编辑器只适用于指定的赛事及盘口类型。功能可能随时被取消或者是被调整。 </li>

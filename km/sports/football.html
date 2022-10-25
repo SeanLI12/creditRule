@@ -4,45 +4,33 @@
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">កីឡាបាល់ទាត់</p>
     <p class="b sub" style="font-size:13px"><em>កាលបរិច្ឆេទ: 10/01/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">ក្បួនទូទៅ</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">ទីផ្សារសំខាន់</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">ទីផ្សារគ្រាប់ស៊ុតបញ្ចូលទី</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">ទីផ្សារកីឡាករ</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">ពិសេស</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">បាល់ជ្រុង</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">ការពិន័យជាកាត</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">បាល់ហ្វ្រីឃីក</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">បាល់ហ្គោលឃីក</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">បាល់បោះចូល</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">ការប្តូរកីឡាករ</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">បាល់អកហ្សឺ</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">ទីផ្សារបាល់ប៉េណាល់ទី</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">ទីផ្សារការប្រកួត</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">ទីផ្សាររួមបញ្ចូលគ្នា</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">ទីផ្សារផ្សេងៗ</a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">ការប្រកួតសិប្បនិម្មិត</a></td>
-        <td><a href="#efootballmatches" style="color:#FFFFFF;"> (E-កីឡាបាល់ទាត់)</a></td>
-      </tr>
-			  <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">ការបង្កើតប័ណ្ណភ្នាល់</a></td>
-
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">ក្បួនទូទៅ</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;">ក្បួនទូទៅ</a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">ទីផ្សារសំខាន់</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">ទីផ្សារគ្រាប់ស៊ុតបញ្ចូលទី</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">ទីផ្សារកីឡាករ</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">ពិសេស</a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">បាល់ជ្រុង</a></div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">ការពិន័យជាកាត</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">បាល់ហ្វ្រីឃីក</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">បាល់ហ្គោលឃីក</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">បាល់បោះចូល</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">ការប្តូរកីឡាករ</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">បាល់អកហ្សឺ</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">ទីផ្សារបាល់ប៉េណាល់ទី</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">ទីផ្សារការប្រកួត</a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">ទីផ្សាររួមបញ្ចូលគ្នា</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">ទីផ្សារផ្សេងៗ</a></div>
+        <div><a href="#fantasymatches" style="color:#FFFFFF;">ការប្រកួតសិប្បនិម្មិត</a></div>
+        <div><a href="#efootballmatches" style="color:#FFFFFF;">(E-កីឡាបាល់ទាត់)</a></div>
+        <div><a href="#betbuilder" style="color:#FFFFFF;">ការបង្កើតប័ណ្ណភ្នាល់</a></div>
+      </div>
+  </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">ក្បួនទូទៅ</div>
     <ul style="list-style:decimal;">
       <li>លើកលែងមានការកំណត់ផ្សេងពីនេះ ការភ្នាល់បាល់ទាត់ទាំងអស់នឹងត្រូវធ្វើការស៊ីសងតាមការលេង 90នាទី។ </li>
@@ -61,7 +49,7 @@
       <li>ប្រសិនបើពេលវេលាចាប់ផ្តើមការប្រកួតមិនជាក់លាក់ (ឧទា: ដោយសារតែកាលវិភាគទូរទស្សន៍) យើងរក្សាសិទ្ធិក្នុងការកែតម្រូវពេលវេលាដើមដែលបានកំណត់ នៅក្នុងរយៈពេល 72 ម៉ោងនៃពេលវេលាចាប់ផ្តើមផ្លូវការ។ </li>
 		<li>ក្រុមទាំងពីរត្រូវតែចាប់ផ្តើមការប្រកួតជាមួយនឹងចំនួនកីឡាករដូចគ្នា ទើបការភ្នាល់ទាំងអស់ត្រូវបានចាត់ទុកថាមានសុពលភាព។</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">ទីផ្សារសំខាន់</div>
     <p style="margin-left:15px; font-size:14px"><strong>គ្រាប់ត</strong></p>
     <p style="margin-left:30px;"><strong>វិធានទូទៅ</strong>
@@ -551,7 +539,7 @@
       <li>ព្យាករណ៍ក្រុមណាដែលឈ្នះការប្រកួត ហើយប្រសិនបើលទ្ឋផលចុងក្រោយបន្ទាប់ពីការលេងពេញ"90 នាទី"គឺស្មើ គ្រប់ការភ្នាល់ទាំងអស់នឹងត្រូវសងវិញ។ </li>
     </ul>
     <br>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title"><strong>ទីផ្សារគ្រាប់ស៊ុតបញ្ចូលទី</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>គ្រាប់បាល់សរុប </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -757,7 +745,7 @@
       <li>ការទូទាត់នឹងត្រូវបានផ្អែកលើសកម្មភាពកីឡាករណាមួយពីក្រុមទាំងពីរត្រូវបានកត់ត្រាជាពិន្ទុគ្រាប់បាល់ចូលទីខ្លួនឯង។</li>
       <li>ប្រសិនបើការប្រកួតត្រូវបានបោះបង់ចោលមុនពេលគ្រាប់បាល់ចូលទីខ្លួនឯងណាមួយត្រូវបានកត់ត្រា នោះការភ្នាល់ណាមួយនៅលើទីផ្សារនេះនឹងត្រូវចាត់ទុកជាមោឃៈ។</li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">ទីផ្សារកីឡាករ</div>
     <p style="margin-left:10px; font-size:14px"><strong>ច្បាប់ទូទៅ (កីឡាករបានស៊ុតបាល់បញ្ចូលទីពេលណាមួយ/ ដំបូង/ ចុងក្រោយ)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -831,7 +819,7 @@
       <li>ប្រសិនបើកីឡាករណាមិនបានរកពិន្ទុគ្រាប់បាលបាន ឧ. 0,នោះទីផ្សារនឹងត្រូវទូទាត់ជា 'គូ'។</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">ពិសេស</div>
     <p style="margin-left:10px; font-size:14px"><strong>ក្រុមចាប់ផ្ដើមការប្រកួត </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -910,7 +898,7 @@
       <li>ប្រសិនបើការប្រកួតត្រូវបានបោះបង់ចោលមុនពេលគ្រាប់បាល់ចូលទីខ្លួនឯងណាមួយត្រូវបានកត់ត្រា នោះការភ្នាល់ណាមួយនៅលើទីផ្សារនេះនឹងត្រូវចាត់ទុកជាមោឃៈ។</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">បាល់ជ្រុង</div>
     <p style="margin-left:10px; font-size:14px"><strong>បាល់ជ្រុង: វិធានទូទៅ</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1027,7 +1015,7 @@
         <li>"2" សំដៅដល់ ភ្ញៀវឈ្នះ។ </li>
       </ol>
     </ul>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">ការពិន័យជាកាត</div>
     <p style="margin-left:10px; font-size:14px"><strong>កាត: វិធានទូទៅ</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1162,7 +1150,7 @@
         <li>"2" សំដៅដល់ ភ្ញៀវឈ្នះ។ </li>
       </ol>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">បាល់ហ្រ្វីឃីត</div>
     
     
@@ -1176,7 +1164,7 @@
       <li>ប្រសិនបើគ្មានការទាត់បាល់ហ្រ្វីឃីកដោយក្រុមណាមួយក្នុងការលេង90នាទីផ្លូវការ ការភ្នាល់ទាំងអស់ លើទីផ្សារបាល់ហ្រ្វីឃីកដំបូង/ចុងក្រោយ ត្រូវចាត់ទុកជាមោឃៈ។</li>
     </ul>
     <br>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">បាល់ហ្គោលឃីក</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>បាល់ទាត់ចេញដោយអ្នកចាំទីដំបូង / ចុងក្រោយ</strong></p>
@@ -1189,7 +1177,7 @@
     </ul>
     <br>
     <br>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">បាល់បោះចូល</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>បាល់បោះចូលដំបូង / បាល់បោះចូលចុងក្រោយ</strong></p>
@@ -1201,7 +1189,7 @@
       <li>ប្រសិនបើគ្មានបាល់បោះចូលដោយក្រុមណាមួយក្នុងការលេង 90នាទីផ្លូវការ ការភ្នាល់ទាំងអស់លើ បាល់បោះចូលដំបូង/ចុងក្រោយនឹងត្រូវចាត់ទុកជាមោឃៈ។ </li>
     </ul>
     <br>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">ការប្ដូរកីឡាករ</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>ការប្ដូរកីឡាករដំបូង / ការប្ដូរកីឡាករចុងក្រោយ</strong></p>
@@ -1214,7 +1202,7 @@
       <li>ប្រសិនបើគ្មានការប្តូរកីឡាករដោយក្រុមណាមួយក្នុងការលេង90នាទីផ្លូវការ ការភ្នាល់ទាំងអស់លើការ ប្តូរកីឡាករដំបូង/ចុងក្រោយនឹងត្រូវចាត់ទុកជាមោឃៈ។ </li>
     </ul>
     <br>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">បាល់អកហ្សឺ</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>បាល់អកហ្សឺដំបូង / បាល់អកហ្សឺចុងក្រោយ</strong></p>
@@ -1226,7 +1214,7 @@
       <li>ប្រសិនបើការប្រកួតត្រូវបានបោះបង់ចោលមុនបាល់អកហ្សឺដំបូង ការភ្នាល់ទាំងអស់លើបាល់អកហ្សឺ ដំបូង/ចុងក្រោយនឹងត្រូវចាត់ទុកជាមោឃៈ។ </li>
     </ul>
     <br>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">ទីផ្សារបាល់ប៉េណាល់ទី</div>
     <p style="margin-left:10px; font-size:14px"><strong>ក្បួនទូទៅ</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1298,7 +1286,7 @@
       <li>ប្រសិនបើការប្រកួតត្រូវបានលុបចោលមុនពេលលទ្ធផលណាមួយត្រូវបានប្រកាស  នោះការភ្នាល់ណាមួយនៅលើទីផ្សារនេះនឹងត្រូវចាត់ទុកជាមោឃៈ។</li>
     </ul>
     <br>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">ទីផ្សារការប្រកួត</div>
     <p style="margin-left:10px; font-size:14px"><strong>លីក: វិធានទូទៅ</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1587,7 +1575,7 @@
       <li>ប្រសិនបើក្រុមទាំង2 មានពិន្ទុស្មើគ្នា ការកាត់សេចក្តីលើក្រុមឈ្នះរបស់អង្គភាពគ្រប់គ្រងផ្លូវការ នឹងត្រូវបានគេប្រើប្រាស់ (ភាពផ្សេងគ្នានៃគ្រាប់បាល់ លទ្ធផលនៃការជួបគ្នារវាងក្រុមទាំង2 ជាដើម)។ </li>
       <li>ប្រសិនបើមិនមានក្រុមឈរលេខ1ក្នុងពូលត្រូវបានប្រកាសឡើងនោះទេ រាល់ការភ្នាល់ទាំងអស់ នឹងត្រូវចាត់ទុកជាមោឃៈ។ </li>
     </ul>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">ទីផ្សាររួមបញ្ចូលគ្នា</div>
     <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; គ្រាប់បាល់ លើស / ក្រោម</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1677,7 +1665,7 @@
       </li>
       <li>ប្រសិនបើការប្រកួតត្រូវបានបោះបង់ចោលមុនពេលលទ្ឋផលណាមួយត្រូវបានប្រកាស នោះការភ្នាល់ណាមួយនៅលើទីផ្សារនេះនឹងត្រូវចាត់ទុកជាមោឃៈ។</li>
     </ul>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">ទីផ្សារផ្សេងៗ</div>
     <p style="margin-left:10px; font-size:14px"><strong>លទ្ឋផលសរុបក្រុមម្ចាស់ផ្ទះ និងក្រុមភ្ញៀវក្នុងលីកមួយ</strong></p>
     <p style="margin-left:10px">នៅក្នុងលីកមួយចំនួន ក្រុមហ៊ុនយើងខ្ញុំនឹងផ្តល់ជូនឱកាសដល់សមាជិកក្នុងការភ្នាល់លើព្រឹត្តិការណ៍ដើម្បី កំណត់លទ្ធផលរួមនៃព្រឹត្តិការណ៍ទាំងនោះ។ ទីផ្សារនេះ រួមបញ្ចូលលទ្ធផលក្រុមម្ចាស់ផ្ទះទាំងអស់ទល់នឹង លទ្ធផលក្រុមភ្ញៀវទាំងអស់។ ចំពោះការប្រកួតទឹកដីកណ្តាល ក្រុមទី1 នឹងត្រូវចាត់ទុកថាជាក្រុមម្ចាស់ផ្ទះ។ ខាងក្រោមនេះគឺជាការពន្យល់លម្អិតអំពីវិធានសម្រាប់ប្រភេទភ្នាល់ដែលយើងខ្ញុំផ្តល់ជូននេះ។ </p>
@@ -1709,7 +1697,7 @@
       <li>ព្យាករណ៍ថាចំនួនសរុបនៃគ្រាប់បាល់ស៊ុតបញ្ចូលទីដោយក្រុមទាំងពីរលើស ឬក្រោមចំនួនកំណត់។ </li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title">ការប្រកួតសិប្បនិម្មិត</div>
 <!--    <p style="margin-left:20px;"><strong>ការប្រកួតសិប្បនិម្មិត (Fantasy Matches)</strong></p>-->
     <p style="margin-left:10px">ទាំងនេះ គឺជាព្រឹត្តិការណ៍ទាំងឡាយដែលក្រុមពីរ មកពីការប្រកួតដាច់ដោយឡែកពីគ្នាចំនួនពីរ ត្រូវបានចាប់ឲ្យជួបគ្នាសម្រាប់ការព្យាករណ៍ទៅលើលទ្ធផលលើប្រភេទហាងឆេងតាមការស្រមើស្រមៃ។</p>
@@ -1720,7 +1708,7 @@
       <li>ទីលានក្នុងផ្ទះ ឬក្រៅដី មិនត្រូវបានចាត់ទុក ឬមានឥទ្ធិពលលើលទ្ធផល និងការទូទាត់សងក្នុងការប្រកួតសិប្បនិម្មិតឡើយ។</li>
       <li>សម្រាប់ហាងឆេងសិប្បនិម្មិតណាមួយដែលត្រូវបានផ្តល់ជូន ការទូទាត់សង នឹងគោរពតាមច្បាប់នៃប្រភេទហាងឆេងជាក់លាក់ ដែលមានរៀបរាប់ដូចខាងលើ។</li>
     </ul>
-    <a name="efootballmatches"></a>
+    <a id="efootballmatches"></a>
     <div class="sbk-rules-title">ការប្រកួតកីឡាបាល់ទាត់អ៊ីនធើណិត (E-កីឡាបាល់ទាត់)</div>
 <!--    <p style="margin-left:20px;"><strong>ការប្រកួតកីឡាបាល់ទាត់អ៊ីនធើណិត (E-កីឡាបាល់ទាត់)</strong></p>-->
     <ul style="list-style:decimal; margin-left:20px">
@@ -1731,7 +1719,7 @@
       <li>ការដាក់ឈ្មោះក្រុមទៅតាមលេខរៀង (ក្រុមម្ចាស់ផ្ទះ ឬ ក្រៅដី) នឹងមិនទាក់ទងជាមួយនឹងការទូទាត់សងទៅលើការប្រកួតកីឡាបាល់ទាត់សិប្បនិម្មិត ឬ E-កីឡាបាល់ទាត់ឡើយ។. ឧទាហរណ៍ថា ប្រសិនបើកម្មវិធីប្រកួតរបស់យើងបង្ហាញពីការជួបគ្នារវាងក្រុម1 និងក្រុម2 ប៉ុន្តែការប្រកួតផ្លូវការ គឺជាការជួបរវាងក្រុម2 និង ក្រុម1 នោះរាល់ការភ្នាល់ទាំងអស់ នឹងមានសុពលភាព។</li>
     </ul>
 
- <a name="betbuilder"></a>
+ <a id="betbuilder"></a>
     <div class="sbk-rules-title">ការបង្កើតប័ណ្ណភ្នាល់</div>
 <!--    <p style="margin-left:20px;"><strong>ការប្រកួតកីឡាបាល់ទាត់អ៊ីនធើណិត (E-កីឡាបាល់ទាត់)</strong></p>-->
     <ul style="list-style:decimal; margin-left:20px">

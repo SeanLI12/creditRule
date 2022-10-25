@@ -4,44 +4,33 @@
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">BÓNG ĐÁ</p>
     <p class="b sub" style="font-size:13px"><em>Ngày:01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">Luật Chung</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">Các Cược Chính</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">Cược Bàn Thắng</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">Cược Cầu Thủ</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">Cược Đặc Biệt</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">Phạt Góc</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">Thẻ Phạt</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">Đá Phạt</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">Phát Bóng</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">Ném Biên</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">Thay Người</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">Việt Vị</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">Cược Phạt Đền</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">Cược Giải Đấu</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">Cược Kết Hợp</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">Cược Khác</a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">Cược Trận Đấu Giả Định</a></td>
-		<td><a href="#efootballmatches" style="color:#FFFFFF;">Các Trận Đấu E-Football</a></td>
-      </tr>
-		 <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">Cược Tùy Chọn</a></td>
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">Luật Chung</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;">Luật Chung</a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">Các Cược Chính</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">Cược Bàn Thắng</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">Cược Cầu Thủ</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">Cược Đặc Biệt</a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">Phạt Góc</a></div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">Thẻ Phạt</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">Đá Phạt</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">Phát Bóng</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">Ném Biên</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">Thay Người</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">Việt Vị</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">Cược Phạt Đền</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">Cược Giải Đấu</a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">Cược Kết Hợp</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">Cược Khác</a></div>
+        <div><a href="#fantasymatches" style="color:#FFFFFF;">Cược Trận Đấu Giả Định</a></div>
+		    <div><a href="#efootballmatches" style="color:#FFFFFF;">Các Trận Đấu E-Football</a></div>
+        <div><a href="#betbuilder" style="color:#FFFFFF;">Cược Tùy Chọn</a></div>
+      </div>
+    </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">Luật Chung</div>
     <ul style="list-style:decimal;">
       <li>Trừ khi có quy định khác, tất cả cược Bóng đá sẽ được tính dựa trên thời gian thi đấu "90 phút".</li>
@@ -60,7 +49,7 @@
       <li>Nếu thời gian bắt đầu trận đấu chưa được xác định chính xác (ví dụ: do lịch phát sóng), chúng tôi có quyền điều chỉnh thời gian đã nêu ban đầu trong vòng 72 giờ kể từ thời gian bắt đầu chính thức.</li>
         <li>Cả hai đội phải bắt đầu trận đấu với cùng số lượng cầu thủ để tất cả các cược là hợp lệ.</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">Các Cược Chính</div>
     <p style="margin-left:15px; font-size:14px"><strong>Cược Chấp</strong></p>
     <p style="margin-left:30px;"><strong>Luật Chung</strong>
@@ -548,7 +537,7 @@
     <ul style="list-style:decimal; margin-left:20px">
       <li>Cược đặt cho đội thắng trận, nếu kết quả cuối cùng sau "90 phút" thi đấu chính thức là hòa, mọi cược đặt sẽ được hoàn trả tiền cược.</li>
     </ul>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">Cược Bàn Thắng</div>
     <p style="margin-left:10px; font-size:14px"><strong>Tổng Số Bàn Thắng</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -753,7 +742,7 @@
       <li>Cược thanh toán dựa vào việc có bất kỳ cầu thủ nào đang thi đấu của một trong hai đội đá phản lưới nhà.</li>
       <li>Nếu trận đấu bị hủy trước khi có bàn phản lưới nhà xảy ra, thì tất cả cược đặt cho “Phản Lưới Nhà” sẽ bị hủy.</li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">Cược Cầu Thủ</div>
     <p style="margin-left:10px; font-size:14px"><strong>Luật Chung (Cầu Thủ Ghi Bàn Đầu Tiên / Ghi Bàn Cuối Cùng / Ghi Bàn)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -827,7 +816,7 @@
       <li>Nếu một cầu thủ không ghi bàn, ví dụ 0, cược được tính là "Chẵn".</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">Cược Đặc Biệt</div>
     <p style="margin-left:10px; font-size:14px"><strong>Đội Giao Bóng Trước</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -900,7 +889,7 @@
       <li>Nếu trận đấu bị hủy bất cứ thời điểm nào trong "90 phút" thi đấu, tất cả cược đặt cho "Tổng Thời Gian Bù Giờ Hai Hiệp" sẽ bị hủy.</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">Phạt Góc</div>
     <p style="margin-left:10px; font-size:14px"><strong>Phạt Góc: Luật Chung</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1018,7 +1007,7 @@
         </ol>
       </li>
     </ul>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">Thẻ Phạt</div>
     <p style="margin-left:10px; font-size:14px"><strong>Thẻ Phạt: Luật Chung</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1154,7 +1143,7 @@
         </ol>
       </li>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">Đá Phạt</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>Quả Đá Phạt Đầu Tiên / Cuối Cùng</strong></p>
@@ -1165,7 +1154,7 @@
       <li>Nếu trận đấu bị hủy trước khi quả Đá Phạt đầu tiên được thực hiện, mọi cược đặt cho "Quả Đá Phạt Đầu Tiên" và "Quả Đá Phạt Cuối Cùng" sẽ bị hủy. </li>
       <li>Nếu trận đấu không có quả Đá Phạt nào được thực bởi cả hai đội trong "90 phút" thi đấu của trận đấu, mọi cược đặt cho “Quả Đá Phạt Cuối Cùng/Cuối Cùng” sẽ bị hủy. </li>
     </ul>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">Phát Bóng</div>
     <p style="margin-left:10px; font-size:14px"><strong>Quả Phát Bóng Đầu Tiên / Cuối Cùng</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1175,7 +1164,7 @@
       <li>Nếu trận đấu bị hủy trước khi quả Phát Bóng đầu tiên được thực hiện, mọi cược đặt cho "Quả Phát Bóng Đầu Tiên" và "Quả Phát Bóng Cuối Cùng" đều bị hủy. </li>
       <li>Nếu không có quả Phát Bóng nào được thực hiện trong "90 phút" thi đấu của trận đấu, mọi cược đặt cho "Quả Phát Bóng Đầu Tiên / Cuối Cùng" sẽ bị hủy.</li>
     </ul>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">Ném Biên</div>
     <p style="margin-left:10px; font-size:14px"><strong>Quả Ném Biên Đầu Tiên / Cuối Cùng</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1185,7 +1174,7 @@
       <li>Nếu trận đấu bị hủy trước khi quả Ném Biên đầu tiên được thực hiện, mọi cược đặt cho "Quả Ném Biên Đầu Tiên" và "Quả Ném Biên Cuối Cùng" sẽ bị hủy.</li>
       <li>Nếu không có quả Ném Biên nào được thực hiện trong suốt "90 phút" thi đấu của trận đấu, mọi cược đặt cho "Quả Ném Biên Đầu Tiên / Cuối Cùng" sẽ bị hủy. </li>
     </ul>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">Thay Người</div>
     <p style="margin-left:10px; font-size:14px"><strong>Thay Người Đầu Tiên / Cuối Cùng</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1196,7 +1185,7 @@
       <li>Nếu trận đấu bị hủy trước khi có sự thay người đầu tiên, mọi cược đặt cho "Thay Người Đầu Tiên" và "Thay Người Cuối Cùng" sẽ bị hủy. </li>
       <li>Nếu không có sự Thay Người nào xảy tra trong "90 phút" thi đấu của trận đấu, mọi cược đặt cho "Thay Người Đầu Tiền / Cuối Cùng" sẽ bị hủy. </li>
     </ul>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">Cược Việt Vị</div>
     <p style="margin-left:10px; font-size:14px"><strong>Lỗi Việt Vị Đầu Tiên / Cuối Cùng</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1207,7 +1196,7 @@
       <li>Nếu không xảy ra lỗi việt vị nào trong "90 phút" thi đấu của trận đấu, mọi cược đặt cho "Lỗi việt vị Đầu Tiên / Cuối Cùng" sẽ bị hủy.</li>
     </ul>
     <br>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">Cược Phạt Đền</div>
     <p style="margin-left:10px; font-size:14px"><strong>Luật Chung</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1280,7 +1269,7 @@
       <li> Nếu trận đấu bị hủy trước khi kết quả được công bố, tất cả cược sẽ bị hủy.</li>
     </ul>
     <p>&nbsp;</p>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">Cược Giải Đấu</div>
     <p style="margin-left:10px; font-size:14px"><strong>Giải Đấu - Luật Chung</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1569,7 +1558,7 @@
       <li>Nếu không có đội thắng bảng được công bố, tất cả cược đặt sẽ bị hủy.</li>
     </ul>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">Tổng số thị trường</div>
     <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; Tổng Bàn Thắng Trên/Dưới</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1655,7 +1644,7 @@
       </ul>
       <li>Nếu trận đấu bị hủy trước khi trận đấu kết thúc, thì tất cả cược đặt cho “Cơ Hội Kép &amp; Cả Hai Đội Ghi Bàn” sẽ bị hủy.</li>
     </ul>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">Cược Khác</div>
     <p style="margin-left:10px; font-size:14px"><strong>Đội Nhà và Đội Khách trong Giải Đấu</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1691,7 +1680,7 @@
       <li>Cược đặt cho tổng số bàn thắng của tất cả đội nhà và tất cả đội khách cộng lại là trên hoặc dưới một hệ số cho trước.</li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title"> Cược Trận Đấu Giả Định</div>
     <p style="margin-left:20px;">Đây là các sự kiện mà 2 đội thi đấu tại 2 trận khác nhau được giả định là đang thi đấu với nhau và cược dự đoán dựa trên kết quả của Trận Đấu Giả Định này.</p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1701,7 +1690,7 @@
       <li>Sân Nhà hoặc Sân Khách không được xem xét hay ảnh hưởng đến kết quả và việc tính cược cho Trận Đấu Giả Định.</li>
       <li>Tất cả các loại cược được mở cho Trận Đấu Giả Định sẽ được tính dựa trên luật cược chi tiết của mỗi loại cược được nêu bên trên.</li>
     </ul>
-	 <a name="efootballmatches"></a>
+	 <a id="efootballmatches"></a>
         <div class="sbk-rules-title">Các Trận Đấu E-Football</div>
         <ul style="list-style:decimal; margin-left:20px">
             <li>Các trận đấu được tạo ra dưới dạng mô phỏng ảo hoặc dưới dạng player vs player.</li>
@@ -1710,7 +1699,7 @@
             <li>Trường hợp trận được cho đấu lại trong vòng 12 giờ, cược sẽ được tính dựa trên kết quả chính thức.</li>
             <li>Việc sắp xếp thứ tự Đội Nhà hoặc Đội Khách không ảnh hưởng đến kết quả trận đấu E-Football. Ví dụ: nếu kết quả trận đấu tại trang ghi theo thứ tự Đội 1 vs Đội 2, nhưng kết quả chính thức công bố theo thứ tự Đội 2 vs Đội 1, tất cả các cược vẫn sẽ hợp lệ.</li>
         </ul>
- <a name="betbuilder"></a>
+ <a id="betbuilder"></a>
         <div class="sbk-rules-title">Cược Tùy Chọn</div>
         <ul style="list-style:decimal; margin-left:20px">
             <li>Cược Tùy Chọn chỉ khả dụng cho một số trận đấu và loại cược nhất định. Loại cược này có thể bị thu hồi hoặc tạm thời bị vô hiệu hóa tại bất kỳ trận đấu vào bất kỳ lúc nào.</li>

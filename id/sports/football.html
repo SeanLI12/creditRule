@@ -3,44 +3,33 @@
 	<div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">SEPAKBOLA</p>
     <p class="b sub" style="font-size:13px"><em>Tanggal: 01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">Peraturan Umum</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">Pasar Utama</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">Pasar Gol</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">Pasar Pemain</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">Spesial</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">Sudut</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">Bookings / Kartu</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">Tendangan Bebas</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">Tendangan Gol</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">Throw In / Lemparan</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">Substitusi</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">Offsides</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">Pasar Penalti</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">Pasar Kompetisi</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">Gabungan Markets</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">Pasar Lainnya</a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">Pertandingan Fantasi</a></td>
-        <td><a href="#efootballmatches" style="color:#FFFFFF;">Pertandingan E-Sepakbola</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">Pembuat Taruhan</a></td>
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">Peraturan Umum</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;">Peraturan Umum</a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">Pasar Utama</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">Pasar Gol</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">Pasar Pemain</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">Spesial</a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">Sudut</a></div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">Bookings / Kartu</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">Tendangan Bebas</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">Tendangan Gol</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">Throw In / Lemparan</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">Substitusi</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">Offsides</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">Pasar Penalti</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">Pasar Kompetisi</a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">Gabungan Markets</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">Pasar Lainnya</a></div>
+        <div><a href="#fantasymatches" style="color:#FFFFFF;">Pertandingan Fantasi</a></div>
+        <div><a href="#efootballmatches" style="color:#FFFFFF;">Pertandingan E-Sepakbola</a></div>
+        <div><a href="#betbuilder" style="color:#FFFFFF;">Pembuat Taruhan</a></div>
+      </div>
+    </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">Peraturan Umum</div>
     <ul style="list-style:decimal;">
       <li>Semua taruhan sepakbola akan diselesaikan berdasarkan jadwal "90 menit permainan", kecuali hal lain yang dinyatakan.</li>
@@ -59,7 +48,7 @@
       <li>Jika waktu mulai suatu pertandingan belum diketahui (Contoh: Karena jadwal tayang TV), kami berhak menyesuaikan waktu pertandingan yang tertera, 72 jam diantara jadwal pertandingan resmi tersebut.</li>
       <li>Kedua tim harus memulai pertandingan dengan jumlah pemain yang sama agar semua taruhan di anggap sah.</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title"><strong>Pasar Utama</strong></div>
     <p style="margin-left:15px; font-size:14px"><strong>Handicap</strong></p>
     <p style="margin-left:30px;"><strong>Peraturan Umum</strong>
@@ -536,7 +525,7 @@
     <ul style="list-style:decimal; margin-left:20px">
       <li>Prediksi tim untuk menang dalam pertandingan dan jika hasil akhir "90 menit" penuh permainan adalah seri, semua taruhan akan dikembalikan.</li>
     </ul>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title"><strong>Pasar Gol</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Jumlah Gol </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -725,7 +714,7 @@
       <li>Penyelesaian akan didasarkan pada       setiap pemain aktif dari kedua tim yang tercatat mencetak gol bunuh diri.</li>
       <li>Jika pertandingan ditinggalkan sebelum       gol bunuh diri tercatat, maka setiap taruhan pada pasar ini akan dianggap       batal.</li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title"><strong>Pasar Pemain</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Peraturan Umum (Pencetak Gol Pertama, Terakhir atau Kapanpun)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -796,7 +785,7 @@
       <li>Jika pemain tidak mencetak sebuah gol. Contohnya 0, maka pasaran akan dianggap sebagai genap. </li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title"><strong>Spesial</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Tim Yang Melakukan Kick Off</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -864,7 +853,7 @@
       <li>Jika pertandingan ditinggalkan kapan saja dalam waktu resmi “90 menit” bermain, semua taruhan dalam “Total Waktu Injury yang diberikan pada kedua Babak” akan dianggap batal.</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title"><strong>Sudut</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Sudut: Peraturan Umum</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -975,7 +964,7 @@
 <ul style="list-style:decimal; margin-left:20px">
         	<li>xxx</li>
     </ul>--> 
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title"><strong>Bookings / Kartu</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Bookings: Peraturan Umum</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1093,7 +1082,7 @@
         </ol>
       </li>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title"><strong>Tendangan Bebas</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Tendangan Bebas Pertama / Terakhir</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1103,7 +1092,7 @@
       <li>Jika pertandingan ditinggalkan sebelum Tendangan Bebas Pertama diberikan, semua taruhan dalam ‘Tendangan Bebas Pertama dan Terakhir’ akan dianggap batal.</li>
       <li>Jika tidak ada Tendangan Bebas yang dilakukan oleh kedua Tim dalam waktu “90 menit” resmi bermain, semua pasaran taruhan dalam “Tendangan Bebas Pertama / Terakhir” akan dianggap batal.</li>
     </ul>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title"><strong>Tendangan Gol</strong></div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>Tendangan Gol Pertama / Terakhir </strong></p>
@@ -1115,7 +1104,7 @@
       <li>Jika tidak ada tendangan gol dari kedua Tim dalam waktu penuh “90 menit” permainan, semua taruhan ‘Tendangan Gol Pertama / Terakhir’ akan dibatalkan. </li>
     </ul>
     <br>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title"><strong>Throw-in / Lemparan</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Lemparan Kedalam Pertama / Terakhir </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1126,7 +1115,7 @@
       <li>Jika tidak ada throw-in / lemparan dari kedua Tim dalam waktu penuh “90 menit” permainan, semua taruhan pasar ‘Throw-In / Lemparan Pertama dan Terakhir’ akan dibatalkan.</li>
     </ul>
     <br>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title"><strong>Substitusi</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Substitusi Pertama / Terakhir </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1137,7 +1126,7 @@
       <li>Jika pertandingan ditinggalkan sebelum substitusi pertama diberikan, semua taruhan dalam ‘Substitusi Pertama’ dan ‘Substitusi Terakhir’ akan dianggap batal.</li>
       <li>Jika tidak ada substitusi dari kedua Tim dalam waktu penuh “90 menit” permainan, semua taruhan pasar ‘Substitusi Pertama / Terakhir’ akan dibatalkan.</li>
     </ul>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title"><strong>Offsides</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Offside Pertama / Terakhir</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1211,7 +1200,7 @@
       <li>Penyelesaian akan didasarkan pada pertandingan yang berakhir pada       ronde ke-3,4,5 atau 6 (atau lebih) di Adu Penalti.</li>
       <li>Apabila pertandingan ditinggalkan sebelum hasil diumumkan, semua       taruhan pada pasar ini akan dibatalkan.</li>
     </ul>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title"><strong>Pasar Kompetisi</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Liga: Peraturan Umum</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1476,7 +1465,7 @@
       <li>Jika kedua tim seri, maka pihak  resmi akan menentukan pemenang grup menggunakan ( Selisih gol, Head to Head,  dll) </li>
       <li>Jika tidak ada pemenang grup, maka semua taruhan  akan dinyatakan batal.</li>
     </ul>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title"><strong>Gabungan Market</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; Gol Atas / Bawah</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1558,7 +1547,7 @@
       </li>
       <li>Jika pertandingan ditinggalkan sebelum hasil apapun telah dinyatakan, maka setiap taruhan pada pasaran ini akan dianggap batal.</li>
     </ul>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title"><strong>Pasar Lainnya</strong></div>
     <p style="margin-left:10px; font-size:14px"><strong>Total Home dan Away Team dalam Liga Tertentu</strong></p>
     <p style="margin-left:10px">Pada liga tertentu, perusahaan akan menawarkan kesempatan untuk anggota untuk bertaruh pada pertandingan yang menentukan hasil dari pertandingan yang digabungkan. Pasar ini mengabungkan semua hasil dari Tim Home melawan dengan hasil dari Tim Away. Untuk taruhan Neutral, Tim 1 akan dianggap ‘Tim Home’ pada pasar ini. Dibawah ini adalah rincian untuk setaip jenis peraturan olahraga yang ditawarkan.</p>
@@ -1593,7 +1582,7 @@
       <li>Prediksi apakah jumlah dari gol pada kedua pilihan akan berada di ‘Atas’ atau di ‘Bawah’ pasaran yang ditentukan.</li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title">Pertandingan Fantasi</div>
     <p style="margin-left:10px">Ini adalah pilihan taruhan antara dua tim yang berasal dari dua pertandingan berbeda yang telah dipasangkan bersama untuk prediksi hasil dari tipe taruhan fantasi.</p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1603,7 +1592,7 @@
       <li>Kandang atau Tandang tidak akan diperhitungkan atau berdampak pada hasil dan penyelesaian pada Pertandingan Fantasi. </li>
       <li>Untuk setiap taruhan fantasi yang ditawarkan, penyelesaian akan mengikuti aturan tipe taruhan yang telah dijelasakan di atas secara spesifik.</li>
     </ul>
-    <a name="efootballmatches"></a>
+    <a id="efootballmatches"></a>
     <div class="sbk-rules-title">Pertandingan E-Sepakbola</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>Pasar ini ditawarkan dalam bentuk Simulasi Virtual atau format Pemain v Pemain.</li>
@@ -1612,7 +1601,7 @@
       <li>Pada acara “Re-make” atau “Re-creation” dalam kurun waktu 12 jam, maka taruhan akan diselesaikan berdasarkan keputusan resmi.</li>
       <li>Contoh, jika fixture menampilkan Tim 1 vs Tim 2, namun kompetisi resmi menampilkan Tim 2 vs Tim 1, maka semua taruhan akan tetap dinyatakan sah.</li>
     </ul>
-    <a name="betbuilder"></a>
+    <a id="betbuilder"></a>
     <div class="sbk-rules-title">Pembuat Taruhan</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>Pembuat Taruhan hanya tersedia untuk pertandingan dan jenis pasaran tertentu. Hal ini dapat dihilangkan atau dinonaktifkan sementara dari pertandingan apa pun kapan saja.</li>

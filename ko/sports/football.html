@@ -4,44 +4,33 @@
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">축구</p>
     <p class="b sub" style="font-size:13px"><em>날짜: 01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;">일반규칙</a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">주요 마켓</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">득점 마켓</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">플레이어 마켓</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">스페셜</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">코너</a>킥 </td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">반칙/카드</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">프리킥</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">골킥</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">스로인 (Throw-in)</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">교체</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">오프사이드</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">승부차기 마켓</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">대회 마켓</a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">결합 마켓</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">그    외</a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">판타지 경기</a></td>
-        <td><a href="#efootballmatches" style="color:#FFFFFF;">E-축구 경기</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;">베팅빌더</a></td>
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">일반규칙</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;">일반규칙</a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">주요 마켓</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">득점 마켓</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">플레이어 마켓</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">스페셜</a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">코너</a>킥 </div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">반칙/카드</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">프리킥</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">골킥</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">스로인 (Throw-in)</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">교체</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">오프사이드</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">승부차기 마켓</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">대회 마켓</a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">결합 마켓</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">그    외</a></div>
+        <div><a href="#fantasymatches" style="color:#FFFFFF;">판타지 경기</a></div> 
+        <div><a href="#efootballmatches" style="color:#FFFFFF;">E-축구 경기</a></div> 
+        <div><a href="#betbuilder" style="color:#FFFFFF;">베팅빌더</a></div> 
+      </div>
+    </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title">일반 규칙</div>
     <ul style="list-style:decimal;">
       <li>축구와 관련된 모든 베팅 마켓의 정산은, 각 마켓에 예외 사항이 명시되어 있지 않는 이상, 정규 "90분"의 경기 결과를 기준으로 합니다. </li>
@@ -60,7 +49,7 @@
       <li>정확한 경기 시작 시간을 알 수 없는 경우(예: 중계 일정으로 인한), 당사는 공식 시작 시간 72시간 이내에 원래 명시된 시간을 조정할 수 있습니다.</li>
       <li>양 팀의 경기 참가 선수 인원이 동일해야만 모든 베팅이 유효한 것으로 간주합니다.</li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">주요 마켓</div>
     <p style="margin-left:15px; font-size:14px"><strong>핸디캡</strong></p>
     <p style="margin-left:30px;"><strong>일반 규칙</strong>
@@ -540,7 +529,7 @@
     <ul style="list-style:decimal; margin-left:20px">
       <li>마켓에 명시된 경기에서 어느 팀이 승리할 지를 예측하는 베팅입니다. 정규 “90분” 경기 후의  결과가 무승부일 경우, 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">득점 마켓</div>
     <p style="margin-left:10px; font-size:14px"><strong>총 득점</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -747,7 +736,7 @@
       <li> 자살골이 기록되기 전에 경기가 중단될 경우, 접수된 모든 베팅은 무효 처리됩니다.</li>
     </ul>
     <br>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title"> 선수 마켓</div>
     <p style="margin-left:10px; font-size:14px"><strong>일반 규칙 (첫/마지막/경기 내 득점 선수)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -825,7 +814,7 @@
       <li>두 선수가 득점을 기록하지 못할 경우 (예시 : 0점), 본 마켓은 ‘짝’을 적중으로 정산합니다. </li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">스페셜</div>
     <p style="margin-left:10px; font-size:14px"><strong>킥오프 팀</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -915,7 +904,7 @@
       <li>경기가 정규 “90분” 중에 중단될 경우, 본 마켓에 접수된 모든 베팅은 무효  처리됩니다. </li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">코너킥</div>
     <p style="margin-left:10px; font-size:14px"><strong>코너킥 : 일반 규칙</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1049,7 +1038,7 @@
         </ul>
       </li>
     </ul>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">경고 / 카드</div>
     <p style="margin-left:10px; font-size:14px"><strong>경고 : 일반 규칙</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1187,7 +1176,7 @@
         </ul>
       </li>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title">프리킥</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>첫번째 프리킥 / 마지막 프리킥</strong></p>
@@ -1199,7 +1188,7 @@
       <li>정규 “90분”의 경기 중에 양 팀이 프리킥을 기록하지 못할 경우, "첫번째 코너킥/마지막 코너킥" 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
     <br>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title">골킥</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>첫 골킥 / 마지막 골킥</strong></p>
@@ -1211,7 +1200,7 @@
       <li>정규 “90분”의 경기 중에 양 팀이 골킥을 기록하지 못할 경우, "첫번째 골킥/마지막 골킥" 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
     <br>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title">스로인 (THROW-IN)</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>첫 스로인 / 마지막 스로인</strong></p>
@@ -1223,7 +1212,7 @@
       <li>정규 “90분”의 경기 중에 양 팀이 스로인을 기록하지 못할 경우, "첫번째 스로인/마지막 스로인" 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
     <br>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title">교체</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>첫번째 교체 / 마지막 교체</strong></p>
@@ -1236,7 +1225,7 @@
       <li>정규 “90분”의 경기 중에 양 팀으로 부터 선수 교체가 없을 경우, "첫번째 교체/마지막 교체" 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
     <br>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title">오프사이드</div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>첫 오프사이드 / 마지막 오프사이드</strong></p>
@@ -1248,7 +1237,7 @@
       <li>정규 “90분”의 경기 중에 기록된 양 팀의 오프사이드가 없을 경우 , "첫번째 오프사이드/마지막 오프사이드" 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
     <br>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">승부차기 마켓</div>
     <p style="margin-left:10px; font-size:14px"><strong>일반 규칙</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1320,7 +1309,7 @@
       <li>본 마켓에 접수된 베팅은 3번째, 4번째, 5번째 또는 6(혹은 그 이후)번째 승부차기 라운드 옵션 중 적중하는 결과에 따라 정산됩니다.</li>
       <li>본 마켓에 대한 결과가 도출되기 전에 경기가 중단될 경우, 본 마켓에 접수된 모든 베팅은 무효 처리됩니다. </li>
     </ul>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">대회 마켓</div>
     <p style="margin-left:10px; font-size:14px"><strong>리그 : 일반규칙</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1629,7 +1618,7 @@
       <li>두 팀이 무승부를 기록한 경우, 공식 운영 위원회의 의해 결정된 승자를 따릅니다. (득실 차, 맞대결  결과 등.)</li>
       <li>조 승자가 선언되지 않으면 모든 베팅은 무효 처리됩니다.</li>
     </ul>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">베팅 마켓 결합</div>
     <p style="margin-left:20px;"><strong>1X2 &amp; 득점 오버 / 언더</strong>
     </p><ul style="list-style:decimal; margin-left:20px">
@@ -1706,7 +1695,7 @@
     </ul>
     <p></p>
     <p style="margin-left:20px;"> </p>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">그 외</div>
     <p style="margin-left:10px; font-size:14px"><strong>특정 리그의 총 홈팀 및 원정팀</strong></p>
     <p style="margin-left:10px">일부 특정 리그의 경우, 당사는 고객님들께 복수 경기에 결과를 조합하여 예측하는 마켓을 제공하고 있습니다. 
@@ -1745,7 +1734,7 @@
       <li> 선택하신 두 항목의 총 득점이 주어진 베팅 라인에서 오버 또는 언더일 지를 예측하는 베팅입니다</li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title">판타지 경기</div>
     <p>판타지 경기는 각기 다른 2경기에서 2팀을 선정하며, 해당 조합으로 가상의 경기 결과를 예측하는 베팅입니다.</p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1755,7 +1744,7 @@
       <li>각 경기의 홈/원정 장소는 본 판타지 경기 마켓의 정산에 영향을 미치지 않습니다. </li>
       <li>모든 판타지 경기 마켓은 위의 실제 경기 규칙을 따릅니다.</li>
     </ul>
-    <a name="efootballmatches"></a>
+    <a id="efootballmatches"></a>
     <div class="sbk-rules-title">E-축구 경기</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>경기는 가상 시뮬레이션 또는 플레이어 대 플레이어 형식으로 제공됩니다.</li>
@@ -1764,7 +1753,7 @@
       <li>12시간 이내에 "리메이크" 또는 "리크리에이션" 이 발생한 경우, 베팅은 공식 결과에 따라 정산됩니다.</li>
       <li>팀 이름 순서(홈 또는 어웨이)는 E-축구 경기 정산에 영향을 미치지 않습니다. 예를 들어, 당사의 경기 일정에는 팀 1 vs 팀 2로 명시되어 있지만 실제 공식 경기에서는 팀 2 vs 팀 1로 명시되어 있는 경우에도, 모든 베팅은 유효합니다.</li>
     </ul>
-    <a name="betbuilder"></a>
+    <a id="betbuilder"></a>
     <div class="sbk-rules-title">베팅빌더</div>
     <ul style="list-style:decimal; margin-left:20px">
       <li>베팅 빌더는 선택한 경기 및 마켓 유형에만 사용할 수 있습니다. 언제든지 모든 경기에서 철회되거나 일시적으로 비활성화될 수 있습니다.</li>

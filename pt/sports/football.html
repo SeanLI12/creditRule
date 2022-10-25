@@ -4,45 +4,35 @@
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">FUTEBOL</p>
     <p class="b sub" style="font-size:13px"><em>Última Atualização: 01/10/2022</em></p>
-    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-      <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#generalrules" style="color:#FFFFFF;"><u>Regras Gerais</u></a></td>
-        <td><a href="#mainmarkets" style="color:#FFFFFF;">Mercados Principais</a></td>
-        <td><a href="#goalmarkets" style="color:#FFFFFF;">Mercado de Gols</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#playersmarkets" style="color:#FFFFFF;">Jogadores</a></td>
-        <td><a href="#specials" style="color:#FFFFFF;">Especiais</a></td>
-        <td><a href="#corners" style="color:#FFFFFF;">Escanteios</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#bookingscards" style="color:#FFFFFF;">Cartões</a></td>
-        <td><a href="#freekicks" style="color:#FFFFFF;">Faltas</a></td>
-        <td><a href="#goalkicks" style="color:#FFFFFF;">Tiros de Meta</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#throwins" style="color:#FFFFFF;">Laterais</a></td>
-        <td><a href="#substitutions" style="color:#FFFFFF;">Substituições</a></td>
-        <td><a href="#offsides" style="color:#FFFFFF;">Impedimentos</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#penaltymarkets" style="color:#FFFFFF;">Pênaltis</a></td>
-        <td><a href="#competitionmarkets" style="color:#FFFFFF;">Competições </a></td>
-        <td><a href="#CombinedMarkets" style="color:#FFFFFF;">Mercados Combinados</a></td>
-      </tr>
-      <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#othermarkets" style="color:#FFFFFF;">Outros</a></td>
-        <td><a href="#fantasymatches" style="color:#FFFFFF;">Jogos Fantasia</a></td>
-        <td><a href="#efootball" style="color:#FFFFFF;">Partidas de E-Futebol</a></td>
-      </tr>
-		 <tr bgcolor="#333333" style="color:#FFFFFF;">
-        <td><a href="#betbuilder" style="color:#FFFFFF;"><u>Bet Builder</u></a></td>
-       
-      </tr>
-    </tbody></table>
+    <div class="rules-dropdown" id="myDropdownSub">
+      <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">Regras Gerais</div>
+      <div id="linktable" class="tblrules">
+        <div><a href="#generalrules" style="color:#FFFFFF;"><u>Regras Gerais</u></a></div>
+        <div><a href="#mainmarkets" style="color:#FFFFFF;">Mercados Principais</a></div>
+        <div><a href="#goalmarkets" style="color:#FFFFFF;">Mercado de Gols</a></div>
+        <div><a href="#playersmarkets" style="color:#FFFFFF;">Jogadores</a></div>
+        <div><a href="#specials" style="color:#FFFFFF;">Especiais</a></div>
+        <div><a href="#corners" style="color:#FFFFFF;">Escanteios</a></div>
+        <div><a href="#bookingscards" style="color:#FFFFFF;">Cartões</a></div>
+        <div><a href="#freekicks" style="color:#FFFFFF;">Faltas</a></div>
+        <div><a href="#goalkicks" style="color:#FFFFFF;">Tiros de Meta</a></div>
+        <div><a href="#throwins" style="color:#FFFFFF;">Laterais</a></div>
+        <div><a href="#substitutions" style="color:#FFFFFF;">Substituições</a></div>
+        <div><a href="#offsides" style="color:#FFFFFF;">Impedimentos</a></div>
+        <div><a href="#penaltymarkets" style="color:#FFFFFF;">Pênaltis</a></div>
+        <div><a href="#competitionmarkets" style="color:#FFFFFF;">Competições </a></div>
+        <div><a href="#CombinedMarkets" style="color:#FFFFFF;">Mercados Combinados</a></div>
+        <div><a href="#othermarkets" style="color:#FFFFFF;">Outros</a></div>
+        <div><a href="#fantasymatches" style="color:#FFFFFF;">Jogos Fantasia</a></div>
+        <div><a href="#efootball" style="color:#FFFFFF;">Partidas de E-Futebol</a></div>
+        <div><a href="#betbuilder" style="color:#FFFFFF;">Bet Builder</a></div>
+      </div>
+    </div>
+    
+    </div>
     <br>
     <br>
-    <a name="generalrules"></a>
+    <a id="generalrules"></a>
     <div class="sbk-rules-title"><strong>REGRAS  GERAIS</strong></div>
     <ul style="list-style:decimal;">
       <li>Salvo disposição contrária, todas as apostas de futebol serão pagas com base nos programados “90 Minutos" de jogo.</li>
@@ -61,7 +51,7 @@
       <li>Se o hora de início exata de uma partida for desconhecida (por exemplo, devido ao agendamento da TV), reservamo-nos o direito de ajustar a hora original informada, desde que ela esteja dentro de 72 horas do horário oficial de início.</li>
       <li>Ambos os times devem começar a partida com o mesmo número de jogadores para as apostas serem consideradas válidas. </li>
     </ul>
-    <a name="mainmarkets"></a>
+    <a id="mainmarkets"></a>
     <div class="sbk-rules-title">PRINCIPAIS MERCADOS</div>
     <p style="margin-left:15px; font-size:14px"><strong>Handicap</strong></p>
     <p style="margin-left:30px;"><strong>Regras Gerais</strong>
@@ -557,7 +547,7 @@
       <li>Prever a equipe que vai ganhar o jogo, e se o resultado final após os “90 Minutos” de jogo for empate, todas as apostas serão reembolsadas.</li>
     </ul>
     <br>
-    <a name="goalmarkets"></a>
+    <a id="goalmarkets"></a>
     <div class="sbk-rules-title">Mercado de Gols</div>
     <p style="margin-left:10px; font-size:14px"><strong>Total de Gols </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -754,7 +744,7 @@
       <li>Se o  jogo for interrompido antes do primeiro gol marcado, todas as apostas  no " Tempo do 1º Gol " serão consideradas nulas.</li>
       <li>O primeiro gol tem que ser válido e confirmado pelo árbitro. Isto inclui gols contras. Gols que não são permitidos pelo árbitro(s) não serão considerados.</li>
     </ul>
-    <a name="playersmarkets"></a>
+    <a id="playersmarkets"></a>
     <div class="sbk-rules-title">Mercado de Jogadores</div>
     <p style="margin-left:10px; font-size:14px"><strong>Regras Gerais (Primeiro/ Último/ artilheiro a Qualquer Hora)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -828,7 +818,7 @@
       <li>Se os dois jogadores não conseguir marcar um gol, Exemplo: zero (0) gol, então o mercado será resolvido com “Par”.</li>
     </ul>
     <p></p>
-    <a name="specials"></a>
+    <a id="specials"></a>
     <div class="sbk-rules-title">Especiais</div>
     <p style="margin-left:10px; font-size:14px"><strong>Equipe A Sair Com A Bola </strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -909,7 +899,7 @@
       <li>Se a partida for abandnoada antes de um gol contra, então quaisquer apostas neste mercado serão consideradas canceladas.</li>
     </ul>
     <p></p>
-    <a name="corners"></a>
+    <a id="corners"></a>
     <div class="sbk-rules-title">Escanteios</div>
     <p style="margin-left:10px; font-size:14px"><strong>Escanteios: Regras Gerais</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1027,7 +1017,7 @@
       </li>
     </ul>
     <br>
-    <a name="bookingscards"></a>
+    <a id="bookingscards"></a>
     <div class="sbk-rules-title">Súmula / Cartões</div>
     <p style="margin-left:10px; font-size:14px"><strong>Súmula: Regras Gerais</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1162,7 +1152,7 @@
         <li>"2" indica: vitória do “Time Visitante”.</li>
       </ol>
     </ul>
-    <a name="freekicks"></a>
+    <a id="freekicks"></a>
     <div class="sbk-rules-title"><strong>Faltas</strong></div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>Primeira Falta / Última Falta</strong></p>
@@ -1174,7 +1164,7 @@
       <li>Se não houver cobrança de falta de uma ou outra equipe dentro dos “90 Minutos” oficiais de jogo, todas as apostas feitas no mercado "Primeira Falta / Última Falta" serão consideradas nulas.</li>
     </ul>
     <br>
-    <a name="goalkicks"></a>
+    <a id="goalkicks"></a>
     <div class="sbk-rules-title"><strong>Tiros de Meta</strong> </div>
     <p style="margin-left:10px; font-size:14px"><strong>Primeiro Tiro de Meta / Último Tiro de Meta</strong></p>
     <br>
@@ -1186,7 +1176,7 @@
       <li>Se não houver Tiro de Meta concedido para qualquer equipe, dentro dos oficiais “90 Minutos” programados de jogo, todas as apostas feitas no mercado "Primeiro Tiro de Meta/Último Tiro de Meta" serão consideradas nulas.</li>
     </ul>
     <br>
-    <a name="throwins"></a>
+    <a id="throwins"></a>
     <div class="sbk-rules-title"><strong>Laterais</strong></div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>Primeiro Lateral / Último Lateral</strong></p>
@@ -1197,7 +1187,7 @@
       <li>Se um jogo for interrompido antes que o Primeiro Lateral seja cobrado, todas as apostas no Primeiro Lateral e Último Lateral serão consideradas nulas.</li>
       <li>Se não houver uma cobrança de lateral concedida para qualquer uma das equipes durante os “90 Minutos” programados de jogo, todas as apostas colocadas no mercado “Primeiro Lateral / Último Lateral” serão consideradas nulas.</li>
     </ul>
-    <a name="substitutions"></a>
+    <a id="substitutions"></a>
     <div class="sbk-rules-title"><strong>Substituições</strong></div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>Primeira Substituição / Última Substituição</strong></p>
@@ -1210,7 +1200,7 @@
       <li>Caso não haja substituição feitas por qualquer equipe dentro dos oficiais “90 Minutos” de jogo, todas as apostas feitas sobre os mercados "Primeira / Última Substituição" serão consideradas nulas .</li>
     </ul>
     <br>
-    <a name="offsides"></a>
+    <a id="offsides"></a>
     <div class="sbk-rules-title"><strong>Impedimentos</strong></div>
     <br>
     <p style="margin-left:10px; font-size:14px"><strong>1º Impedimento / Último Impedimento</strong></p>
@@ -1222,7 +1212,7 @@
       <li>Se não houver Impedimento marcado sobre qualquer equipe, durante os “90 Minutos” programados de jogo, todas as apostas feitas no mercado Primeiro Impedimento/Último Impedimento serão consideradas nulas.</li>
     </ul>
     <br>
-    <a name="penaltymarkets"></a>
+    <a id="penaltymarkets"></a>
     <div class="sbk-rules-title">Mercado de Pênaltis</div>
     <p style="margin-left:10px; font-size:14px"><strong>Regras gerais</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1297,7 +1287,7 @@
     </ul>
     <br>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <a name="competitionmarkets"></a>
+    <a id="competitionmarkets"></a>
     <div class="sbk-rules-title">Mercados de Competições</div>
     <p style="margin-left:10px; font-size:14px"><strong>Liga: Regras Gerais</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1589,7 +1579,7 @@
     </ul>
     <br>
     <p style="margin-left:10px; font-size:14px">&nbsp;</p>
-    <a name="CombinedMarkets"></a>
+    <a id="CombinedMarkets"></a>
     <div class="sbk-rules-title">Mercados Combinados</div>
     <p style="margin-left:10px; font-size:14px"><strong>1 X 2 &amp; Mais de/ Menos de (Gols)</strong></p>
     <ul style="list-style:decimal; margin-left:20px">
@@ -1678,7 +1668,7 @@
       </li>
       <li>Se a partida é abandonada antes do resultado final ter sido declarado, então qualquer aposta neste mercado será cancelada.</li>
     </ul>
-    <a name="othermarkets"></a>
+    <a id="othermarkets"></a>
     <div class="sbk-rules-title">Outros Mercados</div>
     <p style="margin-left:10px; font-size:14px"><strong>Resultado entre equipes Casa e Visitante numa Liga Específica</strong></p>
     <p style="margin-left:10px">Em algumas ligas, o site vai oferecer a oportunidade de apostar em resultados de eventos combinados. Este mercado combina todos os gols das equipes da casa contra todos os gols das equipes de fora. Para os jogos em campo neutro, a Equipe 1 será considerada "da casa" para este mercado. Abaixo segue relação das regras para os tipos de apostas individuais que oferecemos.</p>
@@ -1712,7 +1702,7 @@
       <li>Prever se o número total de gols de ambas equipes será Acima ou Abaixo da linha indicada. </li>
     </ul>
     <p></p>
-    <a name="fantasymatches"></a>
+    <a id="fantasymatches"></a>
     <div class="sbk-rules-title">Jogos Fantasia</div>
     <p style="margin-left:10px">São eventos em que duas equipes, de duas partidas diferentes, são combinadas para prever o resultado de um tipo de mercado imaginário. </p>
     <ul style="list-style:decimal; margin-left:20px">
