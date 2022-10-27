@@ -15,23 +15,22 @@
     <iframe id="mainiframe"  src="./landing.html?lang=EN" frameborder="0" width="100%" height="100%" scrolling="no" ></iframe>
   </body>
   <script>
-    document.getElementById("pageSubName").addEventListener("click",()=>{
+    document.getElementById("sportRule").addEventListener("click",()=>{
       window.scrollTo(0,0);
     })
     
     
     window.onmessage = function(event) {
       if( event.data.topic=="setScrollValue"){
-        console.log("test")
+        
         window.scrollTo(0, event.data.data);
         document.getElementById("mainiframe").contentWindow.scroll(0,0);
       }
+
       if(event.data.topic=="changeContent"){
         document.getElementById("mainiframe").style.height=event.data.data+"px";
       }
       if(event.data.topic=="changeTitle"){
-        
-        
         if(event.data.data.pageName==''){
           document.getElementById("sportRule").classList.add("home");
           document.getElementById("pageSubName").innerText=event.data.data.title;
@@ -47,23 +46,12 @@
       }
     }
 
-    //for testing only
-    function getParameterByName(name, url = window.location.href) {
-      name = name.replace(/[\[\]]/g, '\\$&');
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-   }
-
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const lang = urlParams.get('lang').toUpperCase();
     
-    var lang = getParameterByName('lang'); 
-    var bar = getParameterByName('forcepage'); 
     var ifview=document.getElementById('mainiframe');
 
-    
-    
     const newLocation = "./landing.html?v="+Date.now()+"&lang="+lang;
     
     document.getElementById("back").setAttribute("href", "../index.html?lang="+lang);

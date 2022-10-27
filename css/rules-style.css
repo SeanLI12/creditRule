@@ -559,7 +559,7 @@ figure.table #linktable td{
   font-size:18px;
   color:black;
   height:48px;
-  background:#fafafa url("../img/header_bg.png") no-repeat center center;
+  background:#e2e6e7 url("../img/header_bg.png") no-repeat top center;
   position: sticky; top: 0;
   margin:0;
 }
@@ -568,6 +568,7 @@ figure.table #linktable td{
 #sportRule.home #pageName{
   display: none;
 }
+
 
 #sportRule #pageSubName{
   text-align:center;
@@ -593,9 +594,13 @@ figure.table #linktable td{
   text-align:center;
   font-size:18px;
   color:black;
-  height:24px;
   line-height:17px;
   margin:0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 32px;
+  padding-right: 32px;
+  overflow: hidden;
 }
 #back{
   position:absolute;
@@ -695,14 +700,14 @@ figure.table #linktable td{
   text-align:left;
   font-size:14px!important;
   color:black;
-  height:48px;
   background:#e9e9e9;
-  line-height:48px!important;
   margin:0;
   width: 100%;
   left: -16px;
   position: relative;
   padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 body{
   margin:0;
