@@ -559,7 +559,7 @@ figure.table #linktable td{
   font-size:18px;
   color:black;
   height:48px;
-  background:#e2e6e7 url("../img/header_bg.png") no-repeat top center;
+  background:#fafafa url("../img/header_bg.png") no-repeat top center;
   position: sticky; top: 0;
   margin:0;
 }
