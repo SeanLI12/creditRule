@@ -331,28 +331,28 @@
                 <li>
                     Here is an example of In-Play 1 X 2.<br>
                     <br>
-                    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-                        <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-                            <td>&nbsp;</td>
-                            <td>Current Score</td>
-                            <td>1 X 2 In-Play Price</td>
-                        </tr>
-                        <tr bgcolor="#333333" style="color:#FFFFFF;">
-                            <td>Arsenal (H)</td>
-                            <td>1</td>
-                            <td>1.61</td>
-                        </tr>
-                        <tr bgcolor="#333333" style="color:#FFFFFF;">
-                            <td>Manchester United</td>
-                            <td>0</td>
-                            <td>6.0</td>
-                        </tr>
-                        <tr bgcolor="#333333" style="color:#FFFFFF;">
-                            <td>Draw</td>
-                            <td>&nbsp;</td>
-                            <td>3.8</td>
-                        </tr>
-                    </tbody></table>
+                    <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6"
+                            style="text-align:center;">
+
+                            <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                <td>Arsenal (H)</td>
+                                <td>Current Score <div class="righttb">1</div>
+                                </td>
+                                <td>1 X 2 In-Play Price <div class="righttb">1.61</div>
+                                </td>
+                            </tr>
+                            <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                <td>Manchester United</td>
+                                <td>Current Score <div class="righttb">0</div>
+                                </td>
+                                <td>1 X 2 In-Play Price <div class="righttb">6.0</div>
+                                </td>
+                            </tr>
+                            <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                <td>Draw</td>
+                                <td>3.8</td>
+                            </tr>
+                        </table>
                     <br>
                     <ul style="list-style:lower-alpha">
                         <li>
@@ -1402,50 +1402,91 @@
             <li>The full list of Handicap points (pre-season) for each team will be displayed beside their selection names. </li>
             <li>
                 The following example is based on a league with 5 teams.<br><br>
-                <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6" style="text-align:center;">
-                    <tbody><tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <th valign="top"><p align="center"><strong><u>Teams</u></strong></p></th>
-                        <th valign="top"><p align="center"><strong><u>End of Season Points</u></strong></p></th>
-                        <th valign="top"><p align="center"><strong><u>Handicap Points</u></strong></p></th>
-                        <th valign="top"><p align="center"><strong><u>Combined Points</u></strong></p></th>
-                        <th valign="top"><p align="center"><strong><u>Finishing Position</u></strong></p></th>
-                    </tr>
-                    <tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <td valign="top"><p align="center">Team 1</p></td>
-                        <td valign="top"><p align="center">90</p></td>
-                        <td valign="top"><p align="center">3</p></td>
-                        <td valign="top"><p align="center">93</p></td>
-                        <td valign="top"><p align="center">2nd</p></td>
-                    </tr>
-                    <tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <td valign="top"><p align="center">Team 2</p></td>
-                        <td valign="top"><p align="center">85</p></td>
-                        <td valign="top"><p align="center">0 </p></td>
-                        <td valign="top"><p align="center">85</p></td>
-                        <td valign="top"><p align="center">5th</p></td>
-                    </tr>
-                    <tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <td valign="top"><p align="center">Team 3</p></td>
-                        <td valign="top"><p align="center">82</p></td>
-                        <td valign="top"><p align="center">5</p></td>
-                        <td valign="top"><p align="center">87</p></td>
-                        <td valign="top"><p align="center">4th</p></td>
-                    </tr>
-                    <tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <td valign="top"><p align="center"><strong>Team 4</strong></p></td>
-                        <td valign="top"><p align="center"><strong>79</strong></p></td>
-                        <td valign="top"><p align="center"><strong>15</strong></p></td>
-                        <td valign="top"><p align="center"><strong>94</strong></p></td>
-                        <td valign="top"><p align="center"><strong>1st</strong></p></td>
-                    </tr>
-                    <tr bgcolor="#333333" style="color:#FFFFFF;">
-                        <td valign="top"><p align="center">Team 5</p></td>
-                        <td valign="top"><p align="center">79</p></td>
-                        <td valign="top"><p align="center">9</p></td>
-                        <td valign="top"><p align="center">88</p></td>
-                        <td valign="top"><p align="center">3rd</p></td>
-                    </tr>
-                </tbody></table>
+                <table class="tblrules" width="80%" border="0" cellspacing="5" cellpadding="6"
+                                style="text-align:center;">
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <th valign="top">
+                                        <p align="center"><strong><u>Teams</u></strong></p>
+                                    </th>
+                                    <th valign="top">
+                                        <p align="center"><strong><u>End of Season Points</u></strong></p>
+                                    </th>
+                                    <th valign="top">
+                                        <p align="center"><strong><u>Handicap Points</u></strong></p>
+                                    </th>
+                                    <th valign="top">
+                                        <p align="center"><strong><u>Combined Points</u></strong></p>
+                                    </th>
+                                    <th valign="top">
+                                        <p align="center"><strong><u>Finishing Position</u></strong></p>
+                                    </th>
+                                </tr>
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <td valign="top">
+                                        <p align="center">Team 1</p>
+                                    </td>
+                                    <td valign="top">End of Season Points<p class="righttb">90</p>
+                                    </td>
+                                    <td valign="top">Handicap Points<p class="righttb">3</p>
+                                    </td>
+                                    <td valign="top">Combined Points<p class="righttb">93</p>
+                                    </td>
+                                    <td valign="top">Finishing Position<p class="righttb">2nd</p>
+                                    </td>
+                                </tr>
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <td valign="top">
+                                        <p align="center">Team 2</p>
+                                    </td>
+                                    <td valign="top">End of Season Points<p class="righttb">85</p>
+                                    </td>
+                                    <td valign="top">Handicap Points<p class="righttb">0 </p>
+                                    </td>
+                                    <td valign="top">Combined Points<p class="righttb">85</p>
+                                    </td>
+                                    <td valign="top">Finishing Position<p class="righttb">5th</p>
+                                    </td>
+                                </tr>
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <td valign="top">
+                                        <p align="center">Team 3</p>
+                                    </td>
+                                    <td valign="top">End of Season Points<p class="righttb">82</p>
+                                    </td>
+                                    <td valign="top">Handicap Points<p class="righttb">5</p>
+                                    </td>
+                                    <td valign="top">Combined Points<p class="righttb">87</p>
+                                    </td>
+                                    <td valign="top">Finishing Position<p class="righttb">4th</p>
+                                    </td>
+                                </tr>
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <td valign="top">
+                                        <p align="center"><strong>Team 4</strong></p>
+                                    </td>
+                                    <td valign="top">End of Season Points<p class="righttb"><strong>79</strong></p>
+                                    </td>
+                                    <td valign="top">Handicap Points<p class="righttb"><strong>15</strong></p>
+                                    </td>
+                                    <td valign="top">Combined Points<p class="righttb"><strong>94</strong></p>
+                                    </td>
+                                    <td valign="top">Finishing Position<p class="righttb"><strong>1st</strong></p>
+                                    </td>
+                                </tr>
+                                <tr bgcolor="#333333" style="color:#FFFFFF;">
+                                    <td valign="top">
+                                        <p align="center">Team 5</p>
+                                    </td>
+                                    <td valign="top">End of Season Points<p class="righttb">79</p>
+                                    </td>
+                                    <td valign="top">Handicap Points<p class="righttb">9</p>
+                                    </td>
+                                    <td valign="top">Combined Points<p class="righttb">88</p>
+                                    </td>
+                                    <td valign="top">Finishing Position<p class="righttb">3rd</p>
+                                    </td>
+                                </tr>
+                            </table>
             </li>
         </ul>
         <br>

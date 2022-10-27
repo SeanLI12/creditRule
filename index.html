@@ -21,20 +21,22 @@
     
     
     window.onmessage = function(event) {
+      window.scrollTo(0,0);
       if( event.data.topic=="setScrollValue"){
         
-        window.scrollTo(0, event.data.data);
+        
         document.getElementById("mainiframe").contentWindow.scroll(0,0);
       }
 
       if(event.data.topic=="changeContent"){
         document.getElementById("mainiframe").style.height=event.data.data+"px";
+        
       }
       if(event.data.topic=="changeTitle"){
         if(event.data.data.pageName==''){
           document.getElementById("sportRule").classList.add("home");
           document.getElementById("pageSubName").innerText=event.data.data.title;
-
+          
         }else{
           document.getElementById("sportRule").classList.remove("home");
           document.getElementById("pageName").innerText=event.data.data.pageName;
