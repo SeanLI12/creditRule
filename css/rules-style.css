@@ -248,7 +248,7 @@ br {
   line-height: 16px;
   padding: 12px 16px;
   text-align: left;
-  text-transform: uppercase;
+  text-transform: capitalize;
   width: 100%;
   box-sizing: border-box;
 }
@@ -667,6 +667,7 @@ figure.table #linktable td{
   text-overflow: ellipsis;
   overflow: hidden;
   position:relative;
+  text-transform: capitalize;
 }
 .landing .items>div:after{
   content:"";
