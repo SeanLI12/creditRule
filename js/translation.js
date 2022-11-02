@@ -247,7 +247,7 @@ let localization={
 		  "PT":"Ciclismo",
 		  "TH":"ปั่นจักรยาน",
 		  "VI":"đua Xe Đạp",
-		  "FILE":"ccling"
+		  "FILE":"cycling"
 	   },
 	   {
 		  "_CMSKEY":"o_DART",
