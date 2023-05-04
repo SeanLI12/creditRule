@@ -1,4 +1,4 @@
-let popularlist=["o_GENERALRULES","o_FOOTBALL","o_BASKETBALL","o_PARLAYMULTIPLES","o_GASHOUT","o_BETBUILDER","o_OUTRIGHTS","o_EACHWAY"];
+let popularlist=["o_GENERALRULES","o_FOOTBALL","o_BASKETBALL","o_PARLAYMULTIPLES","o_GASHOUT","o_BETBUILDER","o_OUTRIGHTS","o_EACHWAY","o_FREEBET"];
 
 let localization={
 	"All Terms":[
@@ -471,6 +471,19 @@ let localization={
 		  "FILE":"rowing"
 	   },
 	   {
+		  "_CMSKEY":"o_RUGBY",
+		  "EN":"Rugby",
+		  "ZH":"橄榄球联盟",
+		  "ID":"Rugby",
+		  "JA":"ラグビー",
+		  "KM":"កីឡាបាល់ឱប",
+		  "KO":"럭비 유니언 / 럭비 리그",
+		  "PT":"Rugby",
+		  "TH":"รักบี้ ลีก",
+		  "VI":"Bóng Bầu Dục",
+		  "FILE":"rugby"
+	   },
+	   {
 		  "_CMSKEY":"o_SOFTBALL",
 		  "EN":"Softball",
 		  "ZH":"垒球",
@@ -586,6 +599,19 @@ let localization={
 		  "TH":"เป็นที่นิยม",
 		  "VI":"Tiêu Điểm",
 		  "FILE":"Popular"
+	   },
+	   {
+		  "_CMSKEY":"o_FREEBET",
+		  "EN":"Free Bet",
+		  "ZH":"免费投注",
+		  "ID":"Free Bet",
+		  "JA":"フリーベット",
+		  "KM":"ច្បាប់ប្រាក់ភ្នាល់ឥតគិតថ្លៃ",
+		  "KO":"프리벳",
+		  "PT":"Apostas Grátis",
+		  "TH":"ฟรีเดิมพัน",
+		  "VI":"Cược Miễn Phí",
+		  "FILE":"free-bets"
 	   },
 	   {
 		  "_CMSKEY":"o_ALLSPORTSATOZ",

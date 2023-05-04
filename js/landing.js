@@ -1,83 +1,57 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const lang = urlParams.get('lang').toUpperCase();;
+const queryString = window.location.search,
+  urlParams = new URLSearchParams(queryString),
+  lang = urlParams.get("lang").toUpperCase();
 let title;
-for (let i = 0; i < localization["All Terms"].length; i++) {
-  if (localization["All Terms"][i]._CMSKEY == "o_SPORTSRULES") {
-    title = localization["All Terms"][i][lang];
-    localization["All Terms"].splice(i, 1);
-  }
-  if (localization["All Terms"][i]._CMSKEY == "o_POPULAR") {
-    document.getElementById("popularheader").innerHTML = localization["All Terms"][i][lang];
-    localization["All Terms"].splice(i, 1);
-  }
-  if (localization["All Terms"][i]._CMSKEY == "o_ALLSPORTSATOZ") {
-    document.getElementById("atozheader").innerHTML = localization["All Terms"][i][lang];
-    localization["All Terms"].splice(i, 1);
-  }
-}
-//loop popular
+for (let i = 0; i < localization["All Terms"].length; i++) "o_SPORTSRULES" == localization["All Terms"][i]._CMSKEY && (title = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1)), "o_POPULAR" == localization["All Terms"][i]._CMSKEY && (document.getElementById("popularheader").innerHTML = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1)), "o_ALLSPORTSATOZ" == localization["All Terms"][i]._CMSKEY && (document.getElementById("atozheader").innerHTML = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1));
 for (let i = 0; i < popularlist.length; i++) {
-  let optName = popularlist[i];
-  localization["All Terms"].forEach((item, i) => {
-    if (item._CMSKEY == optName) {
-      let divNode = document.createElement("div");
-      let innerdivNode = document.createElement("div");
-      innerdivNode.innerHTML = item[lang];
-      innerdivNode.addEventListener("click", () => {
-        var itemID = item["FILE"];
-        const newLocation = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + '&page=' + itemID + '&lang=' + lang;
-        window.location.href = newLocation;
-        window.parent.window.postMessage({
+  let e = popularlist[i];
+  localization["All Terms"].forEach((l, t) => {
+    if (l._CMSKEY == e) {
+      let a = document.createElement("div"),
+        n = document.createElement("div");
+      n.innerHTML = l[lang], n.addEventListener("click", () => {
+        var e = l.FILE;
+        let t = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+        window.location.href = t, window.parent.window.postMessage({
           topic: "changeTitle",
           data: {
             title: title,
-            pageName: item[lang]
-          },
-        }, "*");
-      })
-      divNode.appendChild(innerdivNode);
-      divNode.setAttribute("class", "items");
-      document.getElementById("popular").appendChild(divNode);
-      localization["All Terms"].splice(i, 1);
+            pageName: l[lang]
+          }
+        }, "*")
+      }), a.appendChild(n), a.setAttribute("class", "items"), document.getElementById("popular").appendChild(a), localization["All Terms"].splice(t, 1)
     }
-  });
+  })
 }
-//loop all
 for (let i = 0; i < localization["All Terms"].length; i++) {
-  let divNode = document.createElement("div");
-  let innerdivNode = document.createElement("div");
-  innerdivNode.innerHTML = localization["All Terms"][i][lang];
-  innerdivNode.addEventListener("click", () => {
-    var itemID = localization["All Terms"][i]["FILE"];
-    const newLocation = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + '&page=' + itemID + '&lang=' + lang;
-    window.location.href = newLocation;
-    window.parent.window.postMessage({
+  let l = document.createElement("div"),
+    t = document.createElement("div");
+  t.innerHTML = localization["All Terms"][i][lang], t.addEventListener("click", () => {
+    var e = localization["All Terms"][i].FILE;
+    let l = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+    window.location.href = l, window.parent.window.postMessage({
       topic: "changeTitle",
       data: {
         title: title,
         pageName: localization["All Terms"][i][lang]
-      },
-    }, "*");
-  })
-  divNode.appendChild(innerdivNode);
-  divNode.setAttribute("class", "items");
-  document.getElementById("sportatoz").appendChild(divNode);
+      }
+    }, "*")
+  }), l.appendChild(t), l.setAttribute("class", "items"), document.getElementById("sportatoz").appendChild(l)
 }
-window.onload = () => {
-  postMessageToSetHeight(document.getElementById("landing").scrollHeight);
+
+function postMessageToSetHeight(e) {
   window.parent.window.postMessage({
+    topic: "changeContent",
+    data: e
+  }, "*")
+}
+
+window.onload = () => {
+  postMessageToSetHeight(document.getElementById("landing").scrollHeight), window.parent.window.postMessage({
     topic: "changeTitle",
     data: {
       title: title,
       pageName: ""
-    },
-  }, "*");
-}
-
-function postMessageToSetHeight(msg) {
-  window.parent.window.postMessage({
-    topic: "changeContent",
-    data: msg,
-  }, "*");
-}
+    }
+  }, "*")
+};

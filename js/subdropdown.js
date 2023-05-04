@@ -1,77 +1,51 @@
-toggleDropdownSub = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let dropdown = document.getElementById("myDropdownSub");
-    dropdown.classList.toggle("show");
-    window.parent.postMessage({
-      topic: "closeDropdown",
-      data: "",
-    }, "*")
+toggleDropdownSub = e => {
+  e.preventDefault(), e.stopPropagation();
+  document.getElementById("myDropdownSub").classList.toggle("show"), window.parent.postMessage({
+    topic: "closeDropdown",
+    data: ""
+  }, "*")
+};
+clickfuc = e => {
+  e.preventDefault(), e.stopPropagation();
+  document.getElementById("myDropdownSub").classList.remove("show");
+  let t = {
+    topic: "setScrollValue",
+    data: getPosition(e.target.getAttribute("href").substring(1))[1]
   };
-  clickfuc = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let dropdown = document.getElementById("myDropdownSub");
-    dropdown.classList.remove("show");
-    let currentTarget = e.target.getAttribute("href").substring(1);
-    let elementpos = getPosition(currentTarget);
-    //window.scrollTo(0, elementpos[1]);
-    let data = {
-      topic: "setScrollValue",
-      data: elementpos[1],
-    };
-    window.parent.window.parent.window.postMessage(data, "*");
-  };
-  getPosition = (element) => {
-    let e = document.getElementById(element);
-    let left = 0;
-    let top = 0;
-    do {
-      left += e.offsetLeft;
-      top += e.offsetTop;
-    } while ((e = e.offsetParent));
-    return [left, top];
-  };
-  window.onload = (event) => {
-    let dropdown = document.getElementById("myDropdownSub");
-    let dropdownlinks = dropdown.getElementsByTagName("a");
-    for (var i = 0; i < dropdownlinks.length; i++) {
-      dropdownlinks[i].addEventListener("click", clickfuc, false);
+  window.parent.window.parent.window.postMessage(t, "*")
+};
+getPosition = e => {
+  let t = document.getElementById(e),
+    o = 0,
+    n = 0;
+  do o += t.offsetLeft, n += t.offsetTop; while (t = t.offsetParent);
+  return [o, n]
+};
+window.onload = e => {
+  let t = document.getElementById("myDropdownSub").getElementsByTagName("a");
+  for (var o = 0; o < t.length; o++) t[o].addEventListener("click", clickfuc, !1);
+  if (document.body.addEventListener("click", () => {
+    document.getElementById("myDropdownSub").classList.remove("show")
+  }, !1), document.documentElement.clientWidth < 640) {
+    let n = document.getElementById("linktable").getElementsByTagName("a");
+    var a = document.createElement("select");
+    a.classList.add("dropdownIOS");
+    for (var o = 0; o < n.length; o++) {
+      let l = n[o].attributes.href.value,
+        s = n[o].innerHTML,
+        r = document.createElement("option");
+      r.innerHTML = s, r.value = l, a.appendChild(r)
     }
-    document.body.addEventListener("click",
-      () => {
-        document.getElementById("myDropdownSub").classList.remove("show");
-      }, false);
-    if (document.documentElement.clientWidth < 640) {
-      let pagecontent = document.getElementById("linktable");
-      let linkary = pagecontent.getElementsByTagName("a");
-      var dropdownContainer = document.createElement("select");
-      dropdownContainer.classList.add("dropdownIOS");
-      for (var i = 0; i < linkary.length; i++) {
-        let ahref = linkary[i].attributes.href.value;
-        let optionName = linkary[i].innerHTML;
-        let optionElement = document.createElement("option");
-        optionElement.innerHTML = optionName;
-        optionElement.value = ahref;
-        dropdownContainer.appendChild(optionElement);
-      }
-      dropdownContainer.onchange = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        let currentTarget = e.target.value.substring(1);
-        let elementpos = getPosition(currentTarget);
-        let data = {
-          topic: "setScrollValue",
-          data: elementpos[1],
-        };
-        window.parent.window.parent.window.postMessage(data, "*");
-        document.getElementsByClassName("dropdownIOS")[0].selectedIndex = 0;
+    a.onchange = function (e) {
+      e.preventDefault(), e.stopPropagation();
+      let t = {
+        topic: "setScrollValue",
+        data: getPosition(e.target.value.substring(1))[1]
       };
-      document.getElementById("myDropdownSub").appendChild(dropdownContainer);
-    }
-  };
-  window.onmessage = function(event) {
-    if (event.data.topic == "closeDropdown") {
-      document.getElementById("myDropdownSub").classList.remove("show");
-    }
+      window.parent.window.parent.window.postMessage(t, "*"), document.getElementsByClassName("dropdownIOS")[0].selectedIndex = 0
+    }, document.getElementById("myDropdownSub").appendChild(a)
   }
+};
+window.onmessage = function (e) {
+  "closeDropdown" == e.data.topic && document.getElementById("myDropdownSub").classList.remove("show")
+};

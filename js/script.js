@@ -1,183 +1,161 @@
-var sportsViewer = document.getElementById("sports-viewer");
-var distEvent;
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+var distEvent,
+  sportsViewer = document.getElementById('sports-viewer');
 function toggleDropdown(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  document.getElementById("myDropdown").classList.toggle("show");
-  document.getElementById("sports-viewer").contentWindow.postMessage({
-    topic: "closeDropdown",
-    data: "",
-  }, "*")
+  e.preventDefault(),
+    e.stopPropagation(),
+    document.getElementById('myDropdown').classList.toggle('show'),
+    document.getElementById('sports-viewer').contentWindow.postMessage({ topic: 'closeDropdown', data: '' }, '*');
 }
-clickFrame = () => {
-  document.getElementById("myDropdownSub").classList.remove("show");
-  a;
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (var i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains("show")) {
-      openDropdown.classList.remove("show");
-    }
-  }
-};
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches(".dropbtn")) {
-    if (event.target.matches(".menu-item")) {
-      var itemID = event.target.id;
-      var dropdownButton = document.getElementById("dropdown-button");
-      dropdownButton.innerText = document.getElementById(itemID).innerText;
-      for (var l = 0; l < document.getElementById("selectContainer").children.length; l++) {
-        if (document.getElementById("selectContainer").children[l].innerText == document.getElementById(itemID).innerText) {
-          document.getElementById("selectContainer").selectedIndex = l;
-        }
-      }
-      window.parent.parent.postMessage({
-        topic: "changeTitle",
-        data: {
-          title: "",
-          pageName: document.getElementById(itemID).innerText
-        },
-      }, "*");
-      const newLocation = "./sports/" + event.target.id + ".html?v=" + Date.now();
-      sportsViewer.style.height = 0;
-      sportsViewer.src = newLocation;
-    }
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
-
-function getParameterByName(name, url = window.location.href) {
-  name = name.replace(/[\[\]]/g, '\\$&');
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+function getParameterByName(e, t = window.location.href) {
+  var o = RegExp(
+    '[?&]' + (e = e.replace(/[\[\]]/g, '\\$&')) + '(=([^&#]*)|&|#|$)'
+  ).exec(t);
+  return o ? (o[2] ? decodeURIComponent(o[2].replace(/\+/g, ' ')) : '') : null;
 }
-
-function postMessageTo(data) {
-  if (data != undefined) {
-    if (data.topic == "setScrollValue") {
-      data.containerheight = sportsViewer.contentWindow.innerHeight + 32;
-      window.parent.window.postMessage(data, "*");
-      // mainViewer.contentWindow.scrollTo(0,data.data);
-    }
-  }
-  if (!distEvent) return;
-  distEvent.source.postMessage(data, distEvent.origin);
+function postMessageTo(e) {
+  void 0 != e &&
+    'setScrollValue' == e.topic &&
+    ((e.containerheight = sportsViewer.contentWindow.innerHeight + 32),
+    window.parent.window.postMessage(e, '*')),
+    distEvent && distEvent.source.postMessage(e, distEvent.origin);
 }
-
 function postMessageToSetHeight() {
-  postMessageTo({
-    topic: "setHeight",
-    data: document.body.scrollHeight,
-  });
+  postMessageTo({ topic: 'setHeight', data: document.body.scrollHeight });
 }
-
-function postMessageToChangeContent(frame) {
-  let innerDoc = frame.contentDocument || frame.contentWindow.document;
-  if (innerDoc.querySelectorAll(".maindiv")[0].offsetHeight > 0) {
-    window.parent.window.postMessage({
-      topic: "changeContent",
-      data: sportsViewer.contentDocument.querySelectorAll(".maindiv")[0].offsetHeight + 200,
-    }, "*");
-  } else {
-    window.parent.window.postMessage({
-      topic: "changeContent",
-      data: sportsViewer.contentDocument.querySelectorAll("body")[0].offsetHeight + 200,
-    }, "*");
+function postMessageToChangeContent(e) {
+  (e.contentDocument || e.contentWindow.document).querySelectorAll(
+    '.maindiv'
+  )[0].offsetHeight > 0
+    ? window.parent.window.postMessage(
+        {
+          topic: 'changeContent',
+          data:
+            sportsViewer.contentDocument.querySelectorAll('.maindiv')[0]
+              .offsetHeight + 200
+        },
+        '*'
+      )
+    : window.parent.window.postMessage(
+        {
+          topic: 'changeContent',
+          data:
+            sportsViewer.contentDocument.querySelectorAll('body')[0]
+              .offsetHeight + 200
+        },
+        '*'
+      ),
+    postMessageTo({ topic: 'changeContent', data: null });
+}
+function postMessageToSetScrollValue(e) {
+  postMessageTo({ topic: 'setScrollValue', data: e });
+}
+function updateIFrameHeight(e) {
+  let t = e.contentDocument || e.contentWindow.document;
+  e.style.height = t.scrollHeight + 'px';
+}
+(clickFrame = () => {
+  document.getElementById('myDropdownSub').classList.remove('show'), a;
+  for (
+    var e, t = document.getElementsByClassName('dropdown-content'), e = 0;
+    e < t.length;
+    e++
+  ) {
+    var o = t[e];
+    o.classList.contains('show') && o.classList.remove('show');
   }
-  postMessageTo({
-    topic: "changeContent",
-    data: null,
-  });
-}
-
-function postMessageToSetScrollValue(scrollValue) {
-  postMessageTo({
-    topic: "setScrollValue",
-    data: scrollValue,
-  });
-}
-
-function updateIFrameHeight(frame) {
-  let innerDoc = frame.contentDocument || frame.contentWindow.document;
-  frame.style.height = innerDoc.scrollHeight + "px";
-}
-sportsViewer.scrolling = "no";
-sportsViewer.onload = function(e) {
-  updateIFrameHeight(sportsViewer);
-  postMessageToChangeContent(sportsViewer);
-  // Bubble events to parent
-  sportsViewer.contentDocument.onclick = function(event) {
-    document.getElementById("myDropdown").classList.remove("show");
-  };
-  if (sportsViewer.src.includes("/sports/football.html")) {
-    var linkTable = sportsViewer.contentDocument.getElementById("linktable");
-    linkTable.addEventListener("click", function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      if (event.target.matches("a")) {
-        var anchorName = event.target.getAttribute("href").substring(1);
-        var targetAnchorDom = sportsViewer.contentDocument.querySelector('a[id="' + anchorName + '"]');
-        if (targetAnchorDom == undefined) {
-          var targetAnchorDom = sportsViewer.contentDocument.querySelector('div[id="' + anchorName + '"]');
-        }
-        postMessageToSetScrollValue(targetAnchorDom.offsetTop + 8);
+}),
+  (window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+      if (e.target.matches('.menu-item')) {
+        var t,
+          o = e.target.id;
+        document.getElementById(
+          'dropdown-button'
+        ).innerText = document.getElementById(o).innerText;
+        for (
+          var n = 0;
+          n < document.getElementById('selectContainer').children.length;
+          n++
+        )
+          document.getElementById('selectContainer').children[n].innerText ==
+            document.getElementById(o).innerText &&
+            (document.getElementById('selectContainer').selectedIndex = n);
+        window.parent.window.postMessage(
+          {
+            topic: 'changeTitle',
+            data: { title: '', pageName: document.getElementById(o).innerText }
+          },
+          '*'
+        );
+        
+        let s = './sports/' + e.target.id + '.html?v=' + Date.now();
+        (sportsViewer.style.height = 0), (sportsViewer.src = s);
       }
-    });
-  }
-};
-window.onmessage = function(event) {
-  if (event.data.topic == "closeDropdown") {
-    document.getElementById("myDropdown").classList.remove("show");
-  }
-  if (event.data.topic == "thmUpdate") {
-    var datatoupdate = event.data.data;
-    console.log(datatoupdate);
-  }
-  if (event.data === "scroll") {
-    console.log(event.data);
-  }
-  if (event.data === "initEvent") {
-    distEvent = event;
-  }
-  if (event.data === "getHeight") {
-    // need calc iframe content height when change window size
+      var r = document.getElementsByClassName('dropdown-content');
+      for (t = 0; t < r.length; t++) {
+        var i = r[t];
+        i.classList.contains('show') && i.classList.remove('show');
+      }
+    }
+  }),
+  sportsViewer.scrolling = 'no';
+  sportsViewer.onload = function(e) {
     updateIFrameHeight(sportsViewer);
-    postMessageToSetHeight();
-  }
-};
-const childWindow = document.getElementById("sports-viewer").contentWindow;
-window.addEventListener("message", (message) => {
-  if (message.source !== childWindow) {
-    return; 
-  }
-  
+      postMessageToChangeContent(sportsViewer);
+      sportsViewer.contentDocument.onclick = function(e) {
+        document.getElementById('myDropdown').classList.remove('show');
+      };
+      sportsViewer.src.includes('/sports/football.html') &&
+        sportsViewer.contentDocument.getElementById('linktable').addEventListener('click', function(e) {
+            if (
+              (e.preventDefault(), e.stopPropagation(), e.target.matches('a'))
+            ) {
+              var t = e.target.getAttribute('href').substring(1),
+                o = sportsViewer.contentDocument.querySelector(
+                  'a[id="' + t + '"]'
+                );
+              if (void 0 == o)
+                var o = sportsViewer.contentDocument.querySelector(
+                  'div[id="' + t + '"]'
+                );
+              postMessageToSetScrollValue(o.offsetTop + 8);
+            }
+          });
+  };
+  window.onmessage = function(e) {
+    if (
+      ('closeDropdown' == e.data.topic &&
+        document.getElementById('myDropdown').classList.remove('show'),
+      'thmUpdate' == e.data.topic)
+    ) {
+      var t = e.data.data;
+      console.log(t);
+    }
+    'scroll' === e.data && console.log(e.data);
+      'initEvent' === e.data && (distEvent = e);
+      'getHeight' === e.data &&
+        (updateIFrameHeight(sportsViewer), postMessageToSetHeight());
+  };
+const childWindow = document.getElementById('sports-viewer').contentWindow;
+window.addEventListener('message', e => {
+  if (e.source !== childWindow) return;
 });
 window.onload = () => {
-  var itemID = getParameterByName('page');
-  if (itemID != undefined) {
-    var dropdownButton = document.getElementById("dropdown-button");
-    dropdownButton.innerText = document.getElementById(itemID).textContent;
-    for (var l = 0; l < document.getElementById("selectContainer").children.length; l++) {
-      if (document.getElementById("selectContainer").children[l].innerText == document.getElementById(itemID).textContent) {
-        document.getElementById("selectContainer").selectedIndex = l;
-      }
+    var e,
+      t = getParameterByName('page');
+    if (void 0 != t) {
+      document.getElementById(
+        'dropdown-button'
+      ).innerText = document.getElementById(t).textContent;
+      for (
+        var o = 0;
+        o < document.getElementById('selectContainer').children.length;
+        o++
+      )
+        document.getElementById('selectContainer').children[o].innerText ==
+          document.getElementById(t).textContent &&
+          (document.getElementById('selectContainer').selectedIndex = o);
+      let n = './sports/' + t + '.html?v=' + Date.now();
+      (sportsViewer.style.height = 0), (sportsViewer.src = n);
     }
-    const newLocation = "./sports/" + itemID + ".html?v=" + Date.now();
-    sportsViewer.style.height = 0;
-    sportsViewer.src = newLocation;
-  }
-}
+};
