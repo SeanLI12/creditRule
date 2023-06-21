@@ -487,7 +487,7 @@ let localization={
 		  "_CMSKEY":"o_SOFTBALL",
 		  "EN":"Softball",
 		  "ZH":"垒球",
-		  "ID":"Sepakbola",
+		  "ID":"Softball",
 		  "JA":"フットボール",
 		  "KM":"កីឡាបាល់ទាត់",
 		  "KO":"축구",
