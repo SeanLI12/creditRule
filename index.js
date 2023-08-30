@@ -63,6 +63,7 @@ let pageNamelistURL=[
 
 let countrys=[
   "en",
+  "hi",
   "id",
   "ja",
   "km",
