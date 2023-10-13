@@ -8,13 +8,15 @@
   </head>
   <body style="background-color: black; margin:0" >
     <h1 id="sportRule" class="home">
-      <a id="back" href="../index.html"><img alt="back" src="../img/chevron_left.png"/></a>
+      <a id="back" href="../sportsRules/index.html"><img alt="back" src="./img/chevron_left.png"/></a>
       <div id="pageSubName"></div>
       <div id="pageName"></div>
     </h1>
     <iframe id="mainiframe"  src="./landing.html?lang=EN" frameborder="0" width="100%" height="100%" scrolling="no" ></iframe>
   </body>
+  
   <script>
+
     document.getElementById("sportRule").addEventListener("click", () => {
       window.scrollTo(0, 0);
     })
@@ -45,9 +47,47 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const lang = urlParams.get('lang').toUpperCase();
-    var ifview = document.getElementById('mainiframe');
-    const newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang;
-    document.getElementById("back").setAttribute("href", "../index.html?lang=" + lang);
+
+    let rTheme=urlParams.get('theme');
+    let newLocation;
+    newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang;
+    if(rTheme!=null){
+      let ctTheme=rTheme.toUpperCase();
+      ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+      newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang+"&theme="+rTheme;
+      
+      var ifview = document.getElementById('mainiframe');
+    
+      document.getElementById("back").setAttribute("href", "../sportsRules/index.html?lang=" + lang+"&theme="+rTheme);
+    }else{
+      var ifview = document.getElementById('mainiframe');
+    
+      document.getElementById("back").setAttribute("href", "../sportsRules/index.html?lang=" + lang);
+    }
+
+
+    
+
+
+
     ifview.src = newLocation;
+
+
+    //add light dark theme
+
+    var css = 'h1 { background: red; }',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+    head.appendChild(style);
+
+    style.type = 'text/css';
+    if (style.styleSheet){
+      // This is required for IE8 and below.
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+
   </script>
 </html>

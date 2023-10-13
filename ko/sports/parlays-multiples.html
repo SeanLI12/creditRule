@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- <link rel="stylesheet" type="text/css" href="http://doc.188contents.com/contents/Components/webteam/webteam.css" /> -->
 <link rel="stylesheet" href="../../css/rules-style.css" />
+<script src="../../js/themeChanger.js"></script>
 <style>
   body .content-rules .maindiv .kr-bullet li:before {
     content: counter(item, disc) !important;
@@ -10,7 +11,7 @@
   <div ng-include="sbkbettingRulesUrl"></div>
   <div class="maindiv stlnt en-gb font16">
     <p class="b sub" id="pagetop">팔레이 / 조합 베팅 / 콤보 베팅</p>
-
+    <p class="b sub" style="font-size:13px"><em>최근 업데이트 : 18/10/2023 </em></p>
     <div class="sbk-rules-title">일반</div>
     <p>
       조합 베팅은 하나의 베팅에 두개 이상의 경기들에 대한 싱글 베팅을 조합한 별도의 베팅 옵션입니다. 조합 베팅에 포함된 각 경기의 싱글 베팅에서 모두 적중해야 해당 조합 베팅을 통해 우승금을 획득하실 수 있습니다. 조합된 경기 중 첫번째 선택
@@ -30,19 +31,17 @@
       <li>경기2 : Chelsea 1.50 x 180달러 = 270달러</li>
       <li>경기3 : Arsenal 1.66 x 270달러 = 448달러</li>
     </ul>
-    <p>조합 베팅 주요 내용</p>
+    <p>조합배팅 규정 </p>
     <ul class="kr-bullet">
-      <li>당사는 최대 10개의 각기 다른 경기를 조합 베팅에 포함할 수 있도록 규정합니다.</li>
-      <li>각각의 경기들은 해당 종목의 베팅 규칙을 따릅니다.</li>
-      <li>
-        당사에서 제공하는 모든 베팅 마켓이 조합 베팅에 포함될 수 있는 것은 아닙니다. 선택하신 항목 중 조합이 불가능한 경우, 베팅표에서 조합이 불가능한 경기임을 붉은색으로 표시합니다. (아래 "서로 연관된 경기에 대한 조합 베팅" 규정 참고)
-      </li>
-      <li>조합 베팅은 진행 날짜가 다른 경기 간의 조합 또한 가능합니다.</li>
+      <li>회사 에서 최대 20개까지 하나로 조합하여 배팅할수 있습니다.  </li>
+      <li>모든 경기들은 스포츠 규칙을 따릅니다.  </li>
+      <li>모든 경기가 다 조합배팅이 가능하지 않습니다. 배팅표에서 서로 연관되지 않는 두 경기를 조합할수 없다면(아래의 ‘서로 연관된 조합배팅’을 참고), 둘중에서 하나의 경기가 조합배팅이 불가능한 경우입니다.</li>
+      <li>서로 다른 종류의 스포츠와 날짜의 경기를 조합하여 배팅할 수 있습니다.  </li>
     </ul>
 
-    <div class="sbk-rules-title">서로 연관된 경기에 대한 조합 베팅</div>
-    <p>동일한 경기에 대한 베팅 마켓 간의 조합 또는 각 경기의 결과가 서로에게 영향을 미치는 마켓 간의 조합은 불가합니다.</p>
-    <p>예제 : 다음의 더블 베팅 조합은 조합 베팅으로 접수가 불가합니다.</p>
+    <div class="sbk-rules-title">서로 연관된 조합배팅 </div>
+    <p>베팅 빌더를 통한 선택지를 제외하고, 동일한 이벤트에서 조합한 조합 베팅은 허용되지 않습니다. 또한, 특정 마켓이 다른 마켓의 결과에 영향을 미치는 경우에도 조합 베팅이 허용되지 않을 수 있습니다. </p>
+    <p>예를들어,아래의 더블은 조합하여 배팅할 수 없습니다.  </p>
     <ul class="kr-bullet">
       <li>Manchester United 승 : 1 X 2 (배당률 1.80)</li>
       <li>Manchester 승 2-0 : 정확한 스코어맞추기 (배당률 7.0)</li>
@@ -315,21 +314,10 @@
     </ul>
     <div class="sbk-rules-title">조합 베팅 유형</div>
     <p>당사는 여러 종류의 조합 베팅 옵션을 제공하고 있습니다. 아래의 표를 통해 각 유형 별 순열을 확인하실 수 있습니다.</p>
-
     <p>조합 베팅 유형 상세 내용</p>
-    <p><strong>더블</strong></p>
+    <p><strong>기본 조합 베팅 (x1) </strong></p>
     <ul style="list-style: none;">
-      더블은 서로 다른 두가지 경기를 조합하는 유형입니다. 선택한 두 경기가 모두 적중해야, 본 조합 베팅을 통해 이익금이 발생됩니다.
-    </ul>
-    <br />
-    <p><strong>트레블</strong></p>
-    <ul style="list-style: none;">
-      트레블은 서로 다른 세가지 경기를 조합하는 유형입니다. 선택한 세 경기가 모두 적중해야, 본 조합 베팅을 통해 이익금이 발생됩니다.
-    </ul>
-    <br />
-    <p><strong>폴드 누적 베팅</strong></p>
-    <ul style="list-style: none;">
-      위의 표에 명시된 4폴드 ~ 10폴드는 서로 다른 경기를 폴드 숫자에 따라 조합하는 유형입니다. 선택한 경기가 모두 적중해야, 본 조합 베팅을 통해 이익금이 발생됩니다.
+      기본 조합 베팅은 2개 이상의 조합으로 구성되어 있습니다 (2폴더, 3폴더, 등등). 모든 항목은 성공적으로 이익금이 보장되어야 합니다.
     </ul>
     <br />
     <p><strong>트릭시</strong></p>

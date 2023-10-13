@@ -34,6 +34,15 @@ selectContainer.onchange = function (e) {
       pageName: document.getElementById(t).textContent
     }
   }, "*");
-  let l = "./sports/" + t + ".html?v=" + Date.now();
+
+  let rTheme=urlParams.get('theme');
+  let l ;
+  if(rTheme!=null){
+    
+     l = "./sports/" + t + ".html?v=" + Date.now()+"&theme="+rTheme;
+  }else{
+    l = "./sports/" + t + ".html?v=" + Date.now();
+  }
+  
   sportsViewer.style.height = 0, sportsViewer.src = l
 }, document.getElementsByClassName("rules-dropdown")[0].appendChild(selectContainer);

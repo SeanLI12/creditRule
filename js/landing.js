@@ -1,6 +1,13 @@
 const queryString = window.location.search,
   urlParams = new URLSearchParams(queryString),
   lang = urlParams.get("lang").toUpperCase();
+
+  let ruleTheme=urlParams.get('theme');
+  if(ruleTheme!=null){
+    let ctTheme=ruleTheme.toUpperCase();
+    ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+  }
+
 let title;
 for (let i = 0; i < localization["All Terms"].length; i++) "o_SPORTSRULES" == localization["All Terms"][i]._CMSKEY && (title = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1)), "o_POPULAR" == localization["All Terms"][i]._CMSKEY && (document.getElementById("popularheader").innerHTML = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1)), "o_ALLSPORTSATOZ" == localization["All Terms"][i]._CMSKEY && (document.getElementById("atozheader").innerHTML = localization["All Terms"][i][lang], localization["All Terms"].splice(i, 1));
 for (let i = 0; i < popularlist.length; i++) {
@@ -11,7 +18,13 @@ for (let i = 0; i < popularlist.length; i++) {
         n = document.createElement("div");
       n.innerHTML = l[lang], n.addEventListener("click", () => {
         var e = l.FILE;
-        let t = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+        let t;
+        if(ruleTheme!=null){
+           t = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang+"&theme="+ruleTheme;
+        }else{
+           t = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+        }
+        
         window.location.href = t, window.parent.window.postMessage({
           topic: "changeTitle",
           data: {
@@ -28,7 +41,13 @@ for (let i = 0; i < localization["All Terms"].length; i++) {
     t = document.createElement("div");
   t.innerHTML = localization["All Terms"][i][lang], t.addEventListener("click", () => {
     var e = localization["All Terms"][i].FILE;
-    let l = "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+    let l;
+    if(ruleTheme!=null){
+     l= "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang+"&theme="+ruleTheme;
+    }else{
+     l= "./" + lang.toLowerCase() + "/rules.html?v=" + Date.now() + "&page=" + e + "&lang=" + lang;
+    }
+    
     window.location.href = l, window.parent.window.postMessage({
       topic: "changeTitle",
       data: {

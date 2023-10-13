@@ -12,6 +12,10 @@ function getParameterByName(e, t = window.location.href) {
   ).exec(t);
   return o ? (o[2] ? decodeURIComponent(o[2].replace(/\+/g, ' ')) : '') : null;
 }
+
+let theme= getParameterByName('theme');
+
+
 function postMessageTo(e) {
   void 0 != e &&
     'setScrollValue' == e.topic &&
@@ -87,8 +91,16 @@ function updateIFrameHeight(e) {
           },
           '*'
         );
+        let s;
+
+        if(theme!=null){
+          s = './sports/' + e.target.id + '.html?v=' + Date.now()+"&theme="+theme;
+        }else{
+          s = './sports/' + e.target.id + '.html?v=' + Date.now();
+        }
+
         
-        let s = './sports/' + e.target.id + '.html?v=' + Date.now();
+     
         (sportsViewer.style.height = 0), (sportsViewer.src = s);
       }
       var r = document.getElementsByClassName('dropdown-content');
@@ -143,6 +155,8 @@ window.addEventListener('message', e => {
 window.onload = () => {
     var e,
       t = getParameterByName('page');
+      
+      
     if (void 0 != t) {
       document.getElementById(
         'dropdown-button'
@@ -155,7 +169,13 @@ window.onload = () => {
         document.getElementById('selectContainer').children[o].innerText ==
           document.getElementById(t).textContent &&
           (document.getElementById('selectContainer').selectedIndex = o);
-      let n = './sports/' + t + '.html?v=' + Date.now();
+          let n;
+          if(theme!=null){
+            n = './sports/' + t + '.html?v=' + Date.now()+"&theme="+theme;
+          }else{
+            n = './sports/' + t + '.html?v=' + Date.now();
+          }
+      
       (sportsViewer.style.height = 0), (sportsViewer.src = n);
     }
 };
