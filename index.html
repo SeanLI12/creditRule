@@ -53,7 +53,12 @@
     newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang;
     if(rTheme!=null){
       let ctTheme=rTheme.toUpperCase();
-      ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+
+      if (ctTheme && ctTheme !== "LIGHT") {
+        document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css`
+      }
+
+      // ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
       newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang+"&theme="+rTheme;
       
       var ifview = document.getElementById('mainiframe');

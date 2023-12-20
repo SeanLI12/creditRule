@@ -28,17 +28,12 @@
   }
 }
 :root{
-  --main-bg-color:rgba(0,0,0,1);
-  --landing-Button-color:rgba(36,36,36,1);
-  --landing-arrow-bg-color:rgba(0,0,0,0.04);
-  --sub-title-bg-color:rgba(26,26,26,1);
-  --inner-sub-title-bg-color:rgba(23,23,23,1);
-  --main-text-color:rgba(255,255,255,1);
+  --main-bg-color:rgba(255,255,255,1);
+  --main-text-color:rgba(0,0,0,0.76);
   --main-imagepath-chevron_down:url(../img/chevron_down.svg);
   --main-imagepath-chevron_up:url(../img/chevron_up.svg);
-  --main-imagepath-chevron_down_dark:url(../img/chevron_down_dark.svg);
-  --main-imagepath-chevron_up_dark:url(../img/chevron_up_dark.svg);
   --title-color:rgba(255,255,255,1);
+  --sports-header-bg-color: #09353E;
 }
 
 body{
@@ -242,11 +237,11 @@ br {
 .rules-dropdown .dropbtn,
 .rules-dropdown .dropbtnSub,
 .rules-dropdown #dropbtnSub {
-  background: #fff var(--main-imagepath-chevron_down_dark) no-repeat right;
-  background-color:var(--landing-Button-color)!important;
+  background: #fff var(--main-imagepath-chevron_down) no-repeat right;
+  background-color:var(--main-bg-color)!important;
   background-position-x: calc(100% - 16px);
   border: 1px solid rgba(0, 0, 0, 0.32);
-  border-color:var(--landing-Button-color)!important;
+  border-color:var(--main-text-color)!important;
   border-radius: 3px;
   cursor: pointer;
   color:var(--main-text-color)!important;
@@ -274,7 +269,7 @@ br {
 
 
 .rules-dropdown .dropdown-content {
-  background-color:var(--landing-Button-color);
+  background-color:white!important;
   border-radius: 4px;
   /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -304,9 +299,9 @@ br {
 }
 
 .rules-dropdown .dropdown-content button {
-  background-color:var(--landing-Button-color);
+  background-color:white!important;
   border: none;
-  color:var(--main-text-color);
+  color:rgba(0,0,0,0.63)!important;
   cursor: pointer;
   display: none;
   font-family: Helvetica;
@@ -389,8 +384,7 @@ br {
 .tblrules td{
   display:block;
   border-radius: 0;
-  /* border:1px solid rgba(235, 235, 235, 1); */
-  border:1px solid #b8b8b864;
+  border:1px solid rgba(235, 235, 235, 1);
   background: none;
   color:black;
   font-size: 14px;
@@ -415,6 +409,7 @@ br {
   float:right;
 }
 .tblrules p{
+  color: black !important;
   text-align: left !important;
 }
 
@@ -423,9 +418,9 @@ br {
 }
 #linktable td,
 #linktable div{
-  background-color: var(--landing-Button-color);
+  background-color: #fff;
   border: none;
-  color: rgba(0, 0, 0, 0.64)!important;
+  color: rgba(0, 0, 0, 0.64);
   cursor: pointer;
   display: block;
   font-family: Helvetica;
@@ -453,7 +448,7 @@ br {
 }
 #linktable{
   margin-top:0;
-  background-color: var(--landing-Button-color);
+  background-color: #fff;
     border-radius: 4px;
     /* box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%); */
     box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
@@ -473,7 +468,6 @@ br {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     display: block;
-    
 }
 #myDropdownSub{
   padding:0;
@@ -567,7 +561,7 @@ figure.table #linktable td{
   font-size:18px;
   color:var(--title-color) !important;
   height:48px;
-  background:rgba(41, 11, 4, 1) url("../img/header_bg.png") no-repeat top center;
+  background: var(--sports-header-bg-color);
   position: sticky; top: 0;
   margin:0;
   text-transform: uppercase;
@@ -654,7 +648,7 @@ figure.table #linktable td{
   font-size:14px;
   color:black;
   height:48px;
-  background:var(--sub-title-bg-color);
+  background:#e9e9e9;
   line-height:48px;
   margin:0;
 }
@@ -668,7 +662,7 @@ figure.table #linktable td{
 }
 .landing .items>div{
   border:1px solid rgba(0, 0, 0, 0.24);
-  background:var(--landing-Button-color);
+  background:white;
   border-radius:8px;
   font-size:13px;
   padding:0 40px 0 8px;
@@ -686,10 +680,9 @@ figure.table #linktable td{
   width:24px;
   height:24px;
   border-radius:50%;
-  background:var(--landing-arrow-bg-color) url(../img/chevron_right.png) no-repeat center center;
+  background:rgba(0, 0, 0, 0.04) url(../img/chevron_right.png) no-repeat center center;
   top:8px;
   right:8px;
-  filter: invert(1);
 }
 .landing .items>div:hover{
   filter: brightness(.9);
@@ -705,13 +698,14 @@ figure.table #linktable td{
   width:100%;
   text-align:center;
   background:linear-gradient(180deg, #525252 0%, #4C4C4C 100%);
+  display: none;
 }
 .maindiv #pagetop{
   padding-left:16px;
   text-align:left;
   font-size:14px!important;
   color:black;
-  background:var(--inner-sub-title-bg-color);
+  background:#e9e9e9;
   margin:0;
   width: 100%;
   left: -16px;
@@ -731,7 +725,6 @@ body{
 }
 #selectContainer{
   position: absolute;
-  background-color: rgba(36,36,36,1);
   width: 100%;
   left: 0;
   top: 16px;

@@ -39,6 +39,7 @@
   --main-imagepath-chevron_down_dark:url(../img/chevron_down_dark.svg);
   --main-imagepath-chevron_up_dark:url(../img/chevron_up_dark.svg);
   --title-color:rgba(255,255,255,1);
+  --sports-header-bg-color: #41376C;
 }
 
 body{
@@ -567,7 +568,7 @@ figure.table #linktable td{
   font-size:18px;
   color:var(--title-color) !important;
   height:48px;
-  background:rgba(41, 11, 4, 1) url("../img/header_bg.png") no-repeat top center;
+  background: var(--sports-header-bg-color);
   position: sticky; top: 0;
   margin:0;
   text-transform: uppercase;
@@ -705,6 +706,7 @@ figure.table #linktable td{
   width:100%;
   text-align:center;
   background:linear-gradient(180deg, #525252 0%, #4C4C4C 100%);
+  display: none;
 }
 .maindiv #pagetop{
   padding-left:16px;

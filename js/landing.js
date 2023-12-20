@@ -5,7 +5,12 @@ const queryString = window.location.search,
   let ruleTheme=urlParams.get('theme');
   if(ruleTheme!=null){
     let ctTheme=ruleTheme.toUpperCase();
-    ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+
+    if (ctTheme && ctTheme !== "LIGHT") {
+      document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css`
+    }
+
+    // ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
   }
 
 let title;
