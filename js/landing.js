@@ -5,12 +5,7 @@ const queryString = window.location.search,
   let ruleTheme=urlParams.get('theme');
   if(ruleTheme!=null){
     let ctTheme=ruleTheme.toUpperCase();
-
-    if (ctTheme && ctTheme !== "LIGHT") {
-      document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css`
-    }
-
-    // ctTheme=="DARK" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+    ctTheme!=="LIGHT" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
   }
 
 let title;
@@ -64,6 +59,10 @@ for (let i = 0; i < localization["All Terms"].length; i++) {
 }
 
 function postMessageToSetHeight(e) {
+  var height = e;
+  if (document.getElementById('landing')) {
+    height = document.getElementById('landing').offsetHeight;
+  }
   window.parent.window.postMessage({
     topic: "changeContent",
     data: e
@@ -71,11 +70,15 @@ function postMessageToSetHeight(e) {
 }
 
 window.onload = () => {
-  postMessageToSetHeight(document.getElementById("landing").scrollHeight), window.parent.window.postMessage({
+  postMessageToSetHeight(document.getElementById("landing").scrollHeight);
+  setTimeout(function() {
+    postMessageToSetHeight(document.getElementById('landing').clientHeight);
+  }, 500);
+  window.parent.window.postMessage({
     topic: "changeTitle",
     data: {
       title: title,
       pageName: ""
     }
-  }, "*")
+  }, "*");
 };
