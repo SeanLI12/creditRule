@@ -12,12 +12,10 @@
 
 
 @media screen and (min-width: 1024px){
-
   ::-webkit-scrollbar-thumb {
     background-color: rgb(186, 186, 192);
     border-radius: 6px;
   }
-
   ::-webkit-scrollbar {
     background-color: rgb(240, 240, 240);
     width: 8px;
@@ -567,7 +565,7 @@ figure.table #linktable td{
 }
 
 #sportRule.home #back,
-#sportRule.home #pageName{
+#sportRule.home #pageName {
   display: none;
 }
 

@@ -6,6 +6,16 @@ const queryString = window.location.search,
   if(ruleTheme!=null){
     let ctTheme=ruleTheme.toUpperCase();
     ctTheme!=="LIGHT" ? document.querySelectorAll("link")[0].href=`./css/rules-style_${ctTheme}.css` : false;
+
+
+    if (ctTheme==="LIGHT"||ctTheme==="DARK") {
+      console.log("Loading image...");
+        let bannerImage = document.createElement('img');
+        bannerImage.src = './img/banner.png';
+        bannerImage.alt = 'Banner';
+        let lightDarkBanner = document.getElementById("light_dark_banner");
+        lightDarkBanner.appendChild(bannerImage);
+    }
   }
 
 let title;
