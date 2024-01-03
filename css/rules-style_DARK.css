@@ -41,9 +41,9 @@
   --title-color:rgba(255,255,255,1);
 }
 
-body{
-  background:var(--main-bg-color)!important;
-  font-family: Arial, Helvetica, sans-serif;
+body {
+    background: var(--main-bg-color) !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 *{
   color:var(--main-text-color)!important;
@@ -389,7 +389,9 @@ br {
 .tblrules td{
   display:block;
   border-radius: 0;
-  border:1px solid rgba(235, 235, 235, 1);
+  /* border:1px solid rgba(235, 235, 235, 1); */
+  
+    border:1px solid #b8b8b864;
   background: none;
   color:black;
   font-size: 14px;
@@ -414,7 +416,7 @@ br {
   float:right;
 }
 .tblrules p{
-  color: black !important;
+  /* color: black !important; */
   text-align: left !important;
 }
 
@@ -588,6 +590,7 @@ figure.table #linktable td{
     box-sizing: border-box;
     width: 80%;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 #sportRule.home #pageSubName{
   text-align:center;
@@ -730,7 +733,6 @@ body{
 }
 #selectContainer{
   position: absolute;
-  background-color: rgba(36,36,36,1);
   width: 100%;
   left: 0;
   top: 16px;
