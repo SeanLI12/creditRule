@@ -579,7 +579,7 @@ figure.table #linktable td{
       padding-top: 5px;
     box-sizing: border-box;
     width: 80%;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0 auto;
 }
 #sportRule.home #pageSubName{
