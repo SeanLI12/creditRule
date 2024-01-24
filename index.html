@@ -126,7 +126,7 @@
       ctTheme !== 'LIGHT'
         ? (document.querySelectorAll(
             'link'
-          )[0].href = `./css/rules-style_${ctTheme}.css`)
+          )[0].href = `./css/rules-style_${ctTheme}.css?v=` + Date.now())
         : false;
       newLocation =
         './landing.html?v=' + Date.now() + '&lang=' + lang + '&theme=' + rTheme;
@@ -159,9 +159,9 @@
     style.type = 'text/css';
     if (style.styleSheet) {
       // This is required for IE8 and below.
-      style.styleSheet.cssText = css;
+      // style.styleSheet.cssText = css;
     } else {
-      style.appendChild(document.createTextNode(css));
+      // style.appendChild(document.createTextNode(css));
     }
   </script>
 </html>

@@ -565,7 +565,7 @@ figure.table #linktable td{
 }
 
 #sportRule.home #back,
-#sportRule.home #pageName {
+#sportRule.home #pageName{
   display: none;
 }
 
