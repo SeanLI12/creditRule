@@ -11,7 +11,7 @@
     <div ng-include="sbkbettingRulesUrl"></div>
     <div class="maindiv stlnt en-gb font16">
       <p class="b sub" id="pagetop">SEPAKBOLA</p>
-      <p class="b sub" style="font-size:13px"><em>Tanggal: 01/06/2023</em></p>
+      <p class="b sub" style="font-size:13px"><em>Tanggal: 20/03/2024</em></p>
       <div class="rules-dropdown" id="myDropdownSub">
         <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">Peraturan Umum</div>
         <div id="linktable" class="tblrules">
@@ -592,34 +592,46 @@
         </li>
       </ul>
       <p></p>
-      <p style="margin-left:15px; font-size:14px"><strong>Tebak Skor</strong></p>
-      <ul style="list-style:decimal; margin:20px; margin-left:50px;">
-        <li>Prediksikan kebenaran hasil akhir pada spesifikasi pertandingan.</li>
-        <li>"Skor Lainnya" mengacu pada setiap scoreline yang tidak terdaftar sebagai pilihan di pasaran.</li>
-      </ul>
-      <br>
       <p style="margin-left:60px;"><strong>Tebak Skor</strong></p>
       <ul style="list-style:decimal; margin:20px;">
-        <li>Memprediksi Koreksi Skor untuk Babak Penuh dari spesifik pertandingan.</li>
-        <li>Taruhan Koreksi Skor Babak Penuh diselesaikan sesuai dengan skor setelah waktu penuh "90 menit".</li>
-        <li>Jika pertandingan ditinggalkan, taruhan Koreksi Skor Babak Penuh hanya akan diselesaikan dimana "Skor
-          Lainnya" yang dimungkinkan pemilihan kemenangan. Ini dikarenakan pasar telah ditentukan tanpa syarat karena
-          setiap gol lanjut tidak akan berpengaruh pada hasil pasaran. Jika terdapat skenario lainnya, taruhan akan
-          dianggap batal. </li>
+        <li>Memprediksi Skor Waktu Penuh untuk sebuah pertandingan.</li>
+        <li>Taruhan Tebak Skor Waktu Penuh diselesaikan sesuai dengan skor setelah "90 menit" penuh.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda, semua taruhan akan dianggap batal, 
+          kecuali ditentukan sebaliknya. Misalnya pilihan taruhan 0-0 akan dianggap kalah, apabila pertandingan 
+          batal dilanjutkan setelah 1 gol atau lebih tercipta.</li>
       </ul>
-      <p style="margin-left:60px;"><strong>Tebak Skor – Babak Pertama</strong>
+
+      <p style="margin-left:60px;"><strong>Tebak Skor – Babak Pertama.</strong>
       </p>
       <ul style="list-style:decimal; margin:20px; margin-left:50px;">
-        <li>Memprediksi Koreksi Skor untuk setengah babak dari spesifik pertandingan.</li>
-        <li>Taruhan Setengah Babak Koreksi Skor hanya berlaku untuk babak pertama dimainkan. Taruhan akan diselesaikan
-          pada saat skor akhir dari waktu pertandingan "45 menit".</li>
-        <li>Jika pertandingan ditinggalkan selama babak pertama, semua taruhan Koreksi skor pada babak pertama hanya
-          akan diselesaikan disaat 'Skor Lainnya' yang dimungkinkan pemilihan kemenangan. Ini dikarenakan pasar telah
-          ditentukan tanpa syarat karena setiap gol lanjut tidak akan berpengaruh pada hasil pasaran. Jika ada skenario
-          lainnya, taruhan akan dianggap batal.</li>
-        <li>Jika pertandingan ditinggalkan selama babak kedua atau periode tambahan, semua taruhan untuk Koreksi Skor
-          Babak Pertama dianggap sah.</li>
+        <li>Memprediksi Skor Babak Pertama untuk sebuah pertandingan.</li>
+        <li>Tebak Skor – Taruhan Babak Pertama hanya berlaku pada babak pertama pertandingan. Taruhan diselesaikan berdasarkan skor pada akhir "45 menit" yang dijadwalkan.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda selama Babak Pertama, semua taruhan akan dianggap batal, kecuali ditentukan sebaliknya.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda selama Babak Kedua atau periode tambahan, semua taruhan Tebak Skor pada Babak Pertama akan dianggap valid.</li>
       </ul>
+
+      <p style="margin-left:60px;"><strong>Tebak Skor – Tambahan Waktu</strong>
+      </p>
+      <ul style="list-style:decimal; margin:20px; margin-left:50px;">
+        <li>Memprediksi Skor Tambahan Waktu untuk sebuah pertandingan.</li>
+        <li>Taruhan Tebak Skor Tambahan Waktu diselesaikan sesuai dengan skor setelah "30 menit" penuh.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda selama Tambahan Waktu, semua taruhan akan dianggap batal, kecuali ditentukan sebaliknya.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda setelah Tambahan Waktu selesai (misalnya Adu Penalti), semua taruhan Tebak Skor Tambahan Waktu akan dianggap valid.</li>
+      </ul>
+
+      <p style="margin-left:60px;"><strong>Tebak Skor – Tambahan Waktu - Babak Pertama</strong>
+      </p>
+      <ul style="list-style:decimal; margin:20px; margin-left:50px;">
+        <li>Memprediksi Skor Tambahan Waktu – Babak Pertama untuk sebuah pertandingan.</li>
+        <li>Taruhan Tebak Skor Tambahan Waktu diselesaikan berdasarkan skor setelah "15 menit" penuh.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwalkan ulang, atau ditunda selama Tambahan Waktu - Babak Pertama, semua taruhan akan dianggap batal, kecuali ditentukan sebaliknya.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda selama Tambahan Waktu - Babak Kedua – Taruhan Babak Pertama akan valid.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda setelah Tambahan Waktu selesai (misalnya Adu Penalti), semua taruhan Tebak Skor – Tambahan Waktu Babak pertama akan dianggap valid.</li>
+      </ul>
+
+
+
+
       <p></p>
       <p style="margin-left:15px; font-size:14px"><strong>Babak Pertama / Waktu Penuh</strong></p>
       <ul style="list-style:decimal; margin:20px;">
@@ -990,6 +1002,17 @@
           taruhan atas pemain tersebut akan dianggap kalah.</li>
         <li>Gol bunuh diri dan gol yang dicetak selama extra time dan adu penalti tidak dihitung.</li>
       </ul>
+
+      <p style="margin-left:10px; font-size:14px"><strong>Mencetak Hat trick (Taruhan Tunggal)</strong></p>
+      <ul style="list-style:decimal; margin-left:20px">
+        <li>Pilih pemain untuk mencetak 3 gol atau lebih dalam sebuah pertandingan resmi "90 menit".</li>
+        <li>Gol Bunuh Diri, Gol di Extra Time, dan Gol Adu Penalti tidak dihitung.</li>
+        <li>Taruhan akan dibatalkan jika pemain yang dipilih tidak bermain dalam pertandingan.</li>
+        <li>Taruhan berlaku jika pemain yang dipilih diturunkan kapan saja selama waktu pertandingan reguler.</li>
+        <li>Jika pertandingan ditangguhkan, dijadwal ulang, atau ditunda, semua taruhan akan dianggap batal kecuali ditentukan tanpa syarat.</li>
+      </ul>
+      <p></p>
+
       <p style="margin-left:10px; font-size:14px"><strong>Gol Tercetak Pada Head To Head</strong></p>
       <p style="margin-left:20px;"><strong>Head To Head (Peraturan Umum)</strong>
       </p>

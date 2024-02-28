@@ -10,7 +10,7 @@
         <div ng-include="sbkbettingRulesUrl"></div>
         <div class="maindiv stlnt en-gb font16">
             <p class="b sub" id="pagetop">FOOTBALL</p>
-            <p class="b sub" style="font-size:13px"><em>Last Update: 01/06/2023</em></p>
+            <p class="b sub" style="font-size:13px"><em>Last Update: 20/03/2024</em></p>
             <div class="rules-dropdown" id="myDropdownSub">
                 <div onclick="toggleDropdownSub(event)" id="dropbtnSub" class="dropbtnSub">General Rules</div>
                 <div id="linktable" class="tblrules">
@@ -641,37 +641,54 @@
                 </li>
             </ul>
             <p></p>
-            <p style="margin-left:15px; font-size:14px"><strong>Correct Score</strong></p>
-            <ul style="list-style:decimal; margin:20px;">
-                <li>Predict the correct score for the relevant period in the specific match.</li>
-                <li>"Any Other Score" refers to any score line not listed as a selection in the market.</li>
-            </ul>
-            <br>
             <p style="margin-left:60px;">
                 <strong>Correct Score</strong>
             </p>
             <ul style="list-style:decimal; margin:20px; margin-left:50px;">
-                <li>Predict the full time Correct Score for the specific match.</li>
-                <li>Full time Correct Score bets are settled according to the score after the full "90 minutes". </li>
-                <li>If a match is abandoned, full time Correct Score bets will only be settled when 'Any Other Score' is
-                    the only possible winning selection. This is due to the market being unconditionally determined as
-                    any further goals have no affect on the market result. In all other scenarios, bets will be
-                    considered void. </li>
+                <li>Predict the Full Time Correct Score for the specific match.</li>
+                <li>Full Time Correct Score bets are settled according to the score after the full "90 minutes".</li>
+                <li>If a match is abandoned, rescheduled, or postponed all bets will be considered void, unless 
+                    unconditionally determined. e.g. 0-0 selection will be settled as a lose, should the event fail to 
+                    continue after 1 or more goals have been scored.</li>
             </ul>
             <p></p>
             <p style="margin-left:60px;">
                 <strong>Correct Score – 1st Half</strong>
             </p>
             <ul style="list-style:decimal; margin:20px; margin-left:50px;">
-                <li>Predict the half time Correct Score for the specific match. </li>
-                <li>Half time Correct Score bets apply to the first half of play only. Bets are settled on the score at
-                    the end of the scheduled "45 minutes". </li>
-                <li>If a match is abandoned during the 1st half, all the half time Correct Score bets will only be
-                    settled when 'Any Other Score' is the only possible winning selection. This is due to the market
-                    being unconditionally determined as any further goals have no affect on the market result. In all
-                    other scenarios, bets will be considered void.</li>
-                <li>If the match is abandoned during the 2nd Half or additional periods, all the half time Correct Score
-                    bets will be considered valid.</li>
+                <li>Predict the 1st Half Correct Score for the specific match.</li>
+                <li>Correct Score – 1st Half bets apply only to the first half of play. Bets are settled on the score 
+                    at the end of the scheduled "45 minutes".</li>
+                <li>If a match is abandoned, rescheduled, or postponed during the 1st Half, all bets will be considered 
+                    void, unless unconditionally determined.</li>
+                <li>If a match is abandoned, rescheduled, or postponed during the 2nd Half or additional periods, 
+                    all Correct Score 1st Half bets will be considered valid.</li>
+            </ul>
+            <p></p>
+            <p style="margin-left:60px;">
+                <strong>Correct Score – Extra Time</strong>
+            </p>
+            <ul style="list-style:decimal; margin:20px; margin-left:50px;">
+                <li>Predict the Extra Time Correct Score for the specific match.</li>
+                <li>Extra Time Correct Score bets are settled according to the score after the full "30 minutes".</li>
+                <li>If a match is abandoned, rescheduled, or postponed during Extra Time, all bets will be considered 
+                    void, unless unconditionally determined.</li>
+                <li>If a match is abandoned, rescheduled, or postponed after Extra Time has been completed (e.g., 
+                    Penalty Shootout), all Correct Score Extra Time bets will be considered valid.</li>
+            </ul>
+            <p></p>
+            <p style="margin-left:60px;">
+                <strong>Correct Score – 1st Half - Extra Time</strong>
+            </p>
+            <ul style="list-style:decimal; margin:20px; margin-left:50px;">
+                <li>Predict the Extra Time – 1st Half Correct Score for the specific match.</li>
+                <li>Extra Time Correct Score bets are settled according to the score after the full "15 minutes".</li>
+                <li>If a match is abandoned, rescheduled, or postponed during Extra Time - 1st Half, all bets will be 
+                    considered void, unless unconditionally determined.</li>
+                <li>If a match is abandoned, rescheduled, or postponed during the Extra Time - 2nd Half of Extra 
+                    Time -1st Half bets will be valid.</li>
+                <li>If a match is abandoned, rescheduled, or postponed after Extra Time has been completed (e.g., 
+                    Penalty Shootout), all Correct Score – 1st Half Extra Time bets will be considered valid.</li>
             </ul>
             <p></p>
             <p style="margin-left:15px; font-size:14px"><strong>Half Time / Full Time</strong></p>
@@ -1070,6 +1087,16 @@
                     However, if that nominated player had been red-carded before the abandonment of the match, then any
                     relevant bets on that player will be considered losing bets.</li>
                 <li>Own goal and goals scored during extra time or penalty shootouts do not count.</li>
+            </ul>
+            <br>
+            <p style="margin-left:10px; font-size:14px"><strong>To Score a Hat trick (Single Match)</strong></p>
+            <ul style="list-style:decimal; margin-left:20px">
+                <li>Select a player to score 3 or more goals in the specific match within the official "90 minutes" play.</li>
+                <li>Own Goals, Extra Time and Penalty Shootout Goals do not count.</li>
+                <li>Bets will be void if the selected player does not play in the match.</li>
+                <li>Bets stand if the selected player is fielded at any time during the regular time of play.</li>
+                <li>If a match is abandoned, rescheduled, or postponed, all bets will be considered void unless unconditionally 
+                    determined.</li>
             </ul>
             <br>
             <p style="margin-left:10px; font-size:14px"><strong>Player Specials (Goals)</strong></p>
