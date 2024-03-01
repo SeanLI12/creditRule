@@ -27,7 +27,7 @@ for (let i = 0; i < localization["All Terms"].length; i++) {
 selectContainer.onchange = function (e) {
   e.preventDefault(), e.stopPropagation();
   let t = e.target.children[e.target.selectedIndex].id;
-  document.getElementById("dropdown-button").innerText = document.getElementById(t).textContent, window.parent.parent.postMessage({
+  document.getElementById("dropdown-button").innerText = document.getElementById(t).textContent, window.parent.window.postMessage({
     topic: "changeTitle",
     data: {
       title: "",
