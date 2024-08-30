@@ -224,6 +224,9 @@ br {
   margin-top: 16px;
   display: block;
 }
+table.tblrules {
+  border-color: white;
+}
 .tblrules p{
   color:white!important;
 }

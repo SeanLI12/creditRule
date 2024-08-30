@@ -35,7 +35,9 @@
   --title-color:rgba(255,255,255,1);
   --sports-header-bg-color: #8B2230;
 }
-
+table.tblrules {
+  border-color: black;
+}
 body{
   background:var(--main-bg-color)!important;
   font-family: Arial, Helvetica, sans-serif;

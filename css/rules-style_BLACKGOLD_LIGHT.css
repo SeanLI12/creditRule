@@ -218,6 +218,9 @@ br {
   margin-top: 16px;
   display: block;
 }
+table.tblrules {
+  border-color: black;
+}
 
 .tblrules tbody{
   display: block;
