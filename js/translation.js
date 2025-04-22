@@ -260,7 +260,7 @@ let localization = {
       KM: "Cricket (កីឡាគ្រីកឃេត)",
       KO: "크리켓",
       PT: "Cricket",
-      TH: "อเมริกันฟุตบอล",
+      TH: "คริกเก็ต",
       VI: "Cricket",
       FILE: "cricket",
     },
