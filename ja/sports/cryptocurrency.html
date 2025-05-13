@@ -1,0 +1,74 @@
+<html>
+  <head></head>
+  <body>
+    ﻿<!-- <link rel="stylesheet" type="text/css" href="http://doc.188contents.com/contents/Components/webteam/webteam.css" /> -->
+    <link rel="stylesheet" href="../../css/rules-style.css" />
+    <script src="../../js/themeChanger.js"></script>
+    <div>
+      <div ng-include="sbkbettingRulesUrl"></div>
+      <div class="maindiv stlnt en-gb font16">
+        <p class="b sub" id="pagetop">仮想通貨 ルール</p>
+        <p class="b sub" style="font-size: 13px">
+          <em>更新日: 2025年7月1日</em>
+        </p>
+        <div class="sbk-rules-title">一般ルール</div>
+        <ul style="list-style: decimal">
+          <li>
+            仮想通貨ベットでは、特定の仮想通貨の価格が、一定の時間後にどう変動するかを予測することができます。
+          </li>
+          <li>
+            仮想通貨ベットは、価格変動に関わらず処理および確定される場合があります。これは、お客様の「オッズ設定」と異なる可能性があります。
+          </li>
+          <li>
+            精算（ベット結果の確定と支払い）は、Binance（バイナンス）ウェブサイトに表示される、各仮想通貨の指定された時刻の価格を基準として行われます。
+          </li>
+          <li>精算の基準時間は、UTC+7タイムゾーンとなります。</li>
+          <li>
+            万が一、市場に異常が発生した場合（例：価格の表示停止や制限など）、当社は自社の判断により、すべてまたはいずれかのオープンベットをクローズしたり、ベットの受付を拒否・キャンセルすることがあります。
+          </li>
+          <li>
+            仮想通貨ページに表示されているチャートは分析目的であり、ベットの精算には使用できません。
+          </li>
+          <li>
+            「クローズ」タイマーは参考値であり、市場の実際のオープン・クローズ時間を正確に反映するものではありません。
+          </li>
+        </ul>
+        <br />
+        <div class="sbk-rules-title">ベットの種類</div>
+
+        <p style="margin-left: 15px; font-size: 16px">
+          <strong>オーバー / アンダー</strong>
+        </p>
+        <ul style="list-style: decimal; margin: 20px">
+          <li>X分後の価格が、指定された値より上か下かを予測します。</li>
+          <li>
+            結果が指定された値と同じだった場合、ベットは「引き分け（Push）」とみなされ、ベット額が返金されます。
+          </li>
+          <li>結果は価格全体に基づいて判定されます。小数点以下も有効です。</li>
+        </ul>
+        <br />
+
+        <p style="margin-left: 15px; font-size: 16px">
+          <strong>ラスト・ディジット（末尾の数字）</strong>
+        </p>
+        <ul style="list-style: decimal; margin: 20px">
+          <li>
+            X分後の価格の末尾の数字が以下のどれに該当するかを予測します:
+            <ul style="list-style: lower-alpha">
+              <li>0～4 または 5～9。</li>
+              <li>奇数 または 偶数（奇数：1,3,5,7,9｜偶数：0,2,4,6,8）。</li>
+              <li>0～9 のいずれかの個別の数字。</li>
+            </ul>
+          </li>
+          <li>
+            小数点以下もラスト・ディジットとしてカウントされます。
+            <p>
+              例：価格が $83,710.01
+              の場合、ラスト・ディジットは「1」となります。
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
